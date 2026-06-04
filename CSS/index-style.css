@@ -1,0 +1,997 @@
+/* Custom Font Import - Black Gothics by NihStudio */
+@font-face {
+    font-family: 'BlackGothics';
+    src: url('../Assets/Fonts/BlackGothicsDemoRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ==================== INTRODUCTION SECTION ==================== */
+.intro-section {
+    padding: 100px 20px;
+    background: #f8f5ee;
+    position: relative;
+    overflow: hidden;
+}
+
+.intro-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.intro-card {
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* Animation Trigger */
+.intro-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Image */
+.intro-image {
+    position: relative;
+}
+
+.intro-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Content */
+.intro-content {
+    padding: 60px 50px;
+    display: flex;
+    align-items: center;
+}
+
+.church-info {
+    width: 100%;
+}
+
+.est {
+    color: #a77f1e;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.church-name {
+    font-family: 'ITC Eras Demi', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #1e2937;
+    line-height: 1.1;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.location {
+    margin-top: 0;
+    font-size: 28px;
+    color: #64748b;
+    margin-bottom: 24px;
+}
+
+.description p {
+    color: #475569;
+    line-height: 1.7;
+    font-size: 1.05rem;
+    margin-bottom: 32px;
+}
+
+/* Buttons */
+.intro-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.btn {
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+}
+
+.btn.primary {
+    background: #c9a44b;
+    color: white;
+}
+
+.btn.primary:hover {
+    background: #991b1b;
+    transform: translateY(-3px);
+}
+
+.btn.secondary {
+    background: transparent;
+    color: #c9a44b;
+    border: 2px solid #c9a44b;
+}
+
+.btn.secondary:hover {
+    background: #b91c1c;
+    color: white;
+}
+
+/* ============= RESPONSIVE ============= */
+@media (max-width: 992px) {
+    .intro-card {
+        grid-template-columns: 1fr;
+    }
+
+    .intro-image {
+        height: auto;
+        max-height: 600px;
+    }
+
+    .intro-image img {
+        height: auto;
+        object-fit: contain;
+    }
+
+    .intro-content {
+        padding: 50px 30px;
+    }
+
+    .church-name {
+        margin-top: 0;
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 600px) {
+    .intro-section {
+        padding: 80px 15px;
+    }
+
+    .intro-content {
+        padding: 45px 25px;
+    }
+
+    .btn {
+        min-width: 80%;
+    }
+}
+
+
+/* ==================== ABOUT OUR PARISH SECTION ==================== */
+.about-parish {
+    padding: 100px 20px;
+    background: #f8f5ee;
+    position: relative;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.main-church-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #c9a44b;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+@font-face {
+    font-family: 'black Gothics by NihStudio';
+    src: url('../Assets/Fonts/BlackGothicsDemoRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.section-title {
+    font-family: 'BlackGothics', serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #1e2937;
+    margin-bottom: 12px;
+    margin-top: 0;
+    text-shadow: 0px 4px 15px #c9a44b;
+}
+
+.section-desc {
+    font-size: 15px;
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Main Content Card - Clean layout: left=image+desc, right=2x2 features */
+.main-content-card {
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-bottom: 80px;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.main-content-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Left Column: Featured image card + description card stacked vertically */
+.about-left-column {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    gap: 20px;
+    padding: 20px;
+    background: #f8f5ee;
+}
+
+.about-image {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.about-image:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 35px rgba(185, 28, 28, 0.12);
+}
+
+.about-image img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.main-content-card.visible .about-image {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.about-text {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    display: flex;
+    align-items: center;
+    height: 270px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) 0.2s;
+}
+
+.about-text:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 35px rgba(185, 28, 28, 0.12);
+}
+
+.main-content-card.visible .about-text {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.about-text p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #475569;
+    margin: 0;
+}
+
+
+
+/* Right Column: 2x2 Grid of Feature Cards */
+.about-features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    background: #f8f5ee;
+}
+
+/* Staggered animations for feature cards */
+.about-features-grid .feature-card:nth-child(1) {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) 0.3s;
+}
+
+.about-features-grid .feature-card:nth-child(2) {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) 0.4s;
+}
+
+.about-features-grid .feature-card:nth-child(3) {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) 0.5s;
+}
+
+.about-features-grid .feature-card:nth-child(4) {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) 0.6s;
+}
+
+.main-content-card.visible .about-features-grid .feature-card {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Features Grid - original kept for other sections if needed */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.feature-card {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 35px rgba(185, 28, 28, 0.12);
+}
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    background: #fef2f2;
+    color: #c9a44b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin: 0 auto 20px;
+}
+
+.feature-card h3 {
+    font-size: 1.35rem;
+    color: #1e2937;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .main-content-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-left-column,
+    .about-features-grid {
+        padding: 18px;
+        gap: 16px;
+    }
+    
+    .about-image img {
+        height: 300px;
+    }
+    
+    .about-features-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    /* Mobile: all elements fade up instead of sideways */
+    .about-image,
+    .about-text,
+    .about-features-grid .feature-card {
+        transform: translateY(30px) !important;
+    }
+    
+    .main-content-card.visible .about-image,
+    .main-content-card.visible .about-text,
+    .main-content-card.visible .about-features-grid .feature-card {
+        transform: translateY(0) !important;
+    }
+
+    .about-text {
+        padding: 35px 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-parish {
+        padding: 80px 15px;
+    }
+
+    .main-church-title {
+        font-size: 15px;
+    }
+
+    .section-title {
+        font-family: 'BlackGothics', serif;
+        font-size: 39px;
+        margin-top: 0;
+        text-shadow: 0px 4px 15px #c9a44b;
+    }
+}
+
+
+/* ==================== MASS SCHEDULE SECTION ==================== */
+.mass-schedule-title {
+    padding: 80px 20px 30px;
+    background: #f8f5ee;
+    text-align: center;
+}
+
+.church-name-tag {
+    font-weight: bold;
+    color: #d4a017;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.section-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 42px;
+    font-weight: 700;
+    font-family: 'BlackGothics', serif;
+    text-shadow: 0px 6px 4px rgb(187 161 107 / 77%);
+}
+
+.section-subtitle {
+    color: #555;
+    font-size: 17px;
+    margin-bottom: 50px;
+}
+
+.mass-schedule-section {
+    padding: 20px 20px;
+    background: #f8f5ee;
+}
+
+.mass-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.mass-card {
+    background: white;
+    border-radius: 16px;
+    padding: 35px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.mass-card:hover {
+    transform: translateY(-10px);
+}
+
+.clock-icon {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #c9a44b;
+}
+
+.mass-card h3 {
+    font-family: 'Playfair Display', serif;
+    color: #0a1428;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+}
+
+.mass-times {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    font-size: 1.05rem;
+}
+
+.mass-times li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    color: #444;
+}
+
+.mass-times li:last-child {
+    border-bottom: none;
+}
+
+.mass-times strong {
+    color: #0a1428;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .mass-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==================== Church Archive Section ==================== */
+.mass-media-archive {
+    padding: 80px 20px 30px;
+    background: #f8f5ee;
+    text-align: center;
+}
+
+.lazmedia-brand {
+    font-weight: bold;
+    color: #d4a017;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.archives-section {
+    padding: 12px 20px;
+    background: #f8f5ee;
+}
+
+.video-scroll-container {
+    overflow-x: auto;
+    padding: 10px 0;
+    scrollbar-width: thin;
+    scrollbar-color: #c9a44b #f0e9d8;
+}
+
+.video-scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.video-scroll-container::-webkit-scrollbar-thumb {
+    background: #c9a44b;
+    border-radius: 10px;
+}
+
+.video-grid {
+    display: flex;
+    gap: 25px;
+    width: max-content;
+    padding: 10px 5px;
+}
+
+.video-card {
+    width: 340px;
+    background: #f8f5ee;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.video-card:hover {
+    transform: translateY(-8px);
+}
+
+.video-wrapper {
+    position: relative;
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio */
+    background: #000;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-card h4 {
+    font-family: 'Playfair Display', serif;
+    padding: 18px 20px 8px;
+    margin: 0;
+    color: #0a1428;
+    font-size: 1.35rem;
+}
+
+.video-card p {
+    padding: 0 20px 20px;
+    color: #555;
+    margin: 0;
+    font-size: 0.98rem;
+}
+
+.view-all-btn-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.view-all-btn {
+    display: inline-block;
+    background: #c9a44b;
+    color: #0a1428;
+    padding: 16px 42px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+}
+
+.view-all-btn:hover {
+    background: #e0b76a;
+    transform: translateY(-4px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .video-card {
+        width: 300px;
+    }
+}
+
+/*===========================Ongoing Events Sector==========================*/
+.ongoin-events {
+    padding: 80px 20px 30px;
+    background: #f8f5ee;
+    text-align: center;
+}
+
+.church-wo-name {
+    font-weight: bold;
+    color: #d4a017;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.events-section {
+    padding: 12px 20px;
+    background: #f8f5ee;
+}
+
+.events-scroll-container {
+    overflow-x: auto;
+    background: #f8f5ee;
+    padding: 15px 15px 0;
+    scrollbar-width: thin;
+    scrollbar-color: #c9a44b #e8e0d0;
+}
+
+.events-scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.events-scroll-container::-webkit-scrollbar-thumb {
+    background: #c9a44b;
+    border-radius: 10px;
+}
+
+.events-grid {
+    display: flex;
+    gap: 25px;
+    width: max-content;
+    padding: 10px 5px;
+}
+
+.event-card {
+    width: 340px;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    flex-shrink: 0;
+}
+
+.event-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.event-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.event-card:hover .event-image img {
+    transform: scale(1.08);
+}
+
+.event-content {
+    padding: 22px;
+}
+
+.event-content h3 {
+    font-family: 'Playfair Display', serif;
+    color: #0a1428;
+    margin-bottom: 8px;
+    font-size: 1.45rem;
+}
+
+.event-date {
+    color: #c9a44b;
+    font-weight: 600;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+
+.event-desc {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.event-btn {
+    display: inline-block;
+    background: #c9a44b;
+    color: #0a1428;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.event-btn:hover {
+    background: #e0b76a;
+    transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .event-card {
+        width: 300px;
+    }
+}
+
+/* News Section Styles - Matches events scroll layout */
+.news-feed {
+    padding: 100px 20px 40px;
+    background: #f8f5ee;
+    text-align: center;
+}
+
+.since-when {
+    font-weight: bold;
+    color: #d4a017;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.section-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 42px;
+    font-weight: 700;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
+    color: #111;
+    text-shadow: 0px 0px 20px rgba(187, 161, 107, 0.5);
+}
+
+.section-subtitle {
+    color: #555;
+    font-size: 17px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.news-section {
+    padding: 0 20px 80px;
+    background: #f8f5ee;
+}
+
+.news-scroll-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 20px;
+    scrollbar-width: thin;
+    scrollbar-color: #d4a017 #f1f5f9;
+}
+
+.news-scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.news-scroll-container::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 10px;
+}
+
+.news-scroll-container::-webkit-scrollbar-thumb {
+    background: #d4a017;
+    border-radius: 10px;
+}
+
+.news-grid {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    padding: 0 10px;
+}
+
+.news-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    width: 400px;
+    flex-shrink: 0;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.news-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.news-image {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+}
+
+.news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.news-card:hover .news-image img {
+    transform: scale(1.05);
+}
+
+.news-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #d4a017;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.news-badge.important {
+    background: #dc2626;
+}
+
+.news-content {
+    padding: 25px;
+}
+
+.news-meta {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.news-date,
+.news-category {
+    color: #64748b;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.news-category {
+    background: #f1f5f9;
+    padding: 3px 10px;
+    border-radius: 10px;
+    color: #334155;
+}
+
+.news-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1e2937;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.news-card p {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.read-more-btn {
+    background: none;
+    border: 2px solid #d4a017;
+    color: #d4a017;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.read-more-btn:hover {
+    background: #d4a017;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Responsive for news section */
+@media (max-width: 768px) {
+    .news-card {
+        width: 320px;
+    }
+    
+    .news-image {
+        height: 200px;
+    }
+    
+    .news-content {
+        padding: 20px;
+    }
+    
+    .section-title {
+        font-size: 32px;
+    }
+}

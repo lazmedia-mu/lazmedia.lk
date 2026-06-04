@@ -1,0 +1,124 @@
+/* ==================== JUBILEE COUNTDOWN SECTION ==================== */
+.jubilee-countdown {
+    padding: 90px 20px;
+    background: #f8f5ee;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.countdown-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.centennial {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #c9a44b;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.main-title {
+    margin-top: 0;
+    font-family: 'Cloister Black';
+    font-size: 46px;
+    font-weight: 700;
+    color: #1e2937;
+    margin-bottom: 16px;
+    line-height: 1.1;
+}
+
+.description {
+    font-size: 15px;
+    color: #475569;
+    max-width: 620px;
+    margin: 0 auto 50px;
+    line-height: 1.6;
+}
+
+/* Countdown Timer */
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.time-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.number {
+    font-family: 'Cloister Black';
+    font-size: 42px;
+    font-weight: 700;
+    color: #1e2937;
+    background: white;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    box-shadow: 0px 9px 10px 2px rgb(201 164 75 / 65%);
+    text-shadow: -3px 2px 0px #d9c089;
+    border: none;
+    transition: color 0.3s ease;
+    margin-bottom: 12px;
+}
+
+.label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Pray Text */
+.pray-text {
+    text-shadow: 0px 3px 4px #e7bb52;
+    font-size: 1.35rem;
+    color: #c9a44b;
+    font-weight: 600;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .jubilee-countdown {
+        padding: 70px 15px;
+    }
+
+    .main-title {
+        font-family: 'Cloister Black';
+        font-size: 2.1rem;
+    }
+
+    .number {
+        width: 95px;
+        height: 95px;
+        font-size: 2.5rem;
+    }
+
+    .countdown-timer {
+        gap: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .number {
+        text-shadow: -3px 2px 0px #d9c089;
+        border: none;
+        width: 78px;
+        height: 78px;
+        font-size: 36px;
+    }
+}

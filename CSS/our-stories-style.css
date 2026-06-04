@@ -1,0 +1,244 @@
+/* Custom Font Import - Black Gothics by NihStudio */
+@font-face {
+    font-family: 'BlackGothics';
+    src: url('../Assets/Fonts/BlackGothicsDemoRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.our-stories {
+    padding: 100px 20px;
+    background: #f8f5ee
+}
+
+.stories-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.since-when-u-know {
+    font-weight: 700;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #c9a44b;
+}
+
+.section-title {
+    font-family: 'BlackGothics', serif;
+    margin-top: 0;
+    text-shadow: 0 4px 8px #c9a44b;
+    font-size: 48px;
+    font-weight: 700;
+    color: #0f0e0e;
+    margin-bottom: 12px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #64748b;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding-left: 60px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 28px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #e2e8f0;
+    border-radius: 2px;
+}
+
+.timeline-item {
+    margin-bottom: 60px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Marker & Dot */
+.timeline-marker {
+    position: absolute;
+    left: 0;
+    top: 12px;
+}
+
+.timeline-dot {
+    width: 22px;
+    margin-left: -45px;
+    height: 22px;
+    background: #c9a44b;
+    border: 4px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 6px rgb(201 164 75 / 33%);
+    position: relative;
+    z-index: 2;
+}
+
+/* Content Card */
+.timeline-content {
+    background: white;
+    padding: 28px 32px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    margin-left: 20px;
+    position: relative;
+}
+
+.timeline-date {
+    display: inline-block;
+    box-shadow: -2px 3px 6px -2px black;
+    background: #c9a44b;
+    color: white;
+    padding: 6px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+}
+
+.timeline-content h3 {
+    font-size: 1.45rem;
+    color: #1e2937;
+    margin-bottom: 12px;
+}
+
+.timeline-content p {
+    color: #475569;
+    line-height: 1.7;
+}
+
+/* Responsive - Mobile Fix */
+@media (max-width: 768px) {
+    .timeline {
+        padding-left: 50px;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-marker {
+        left: -8px;
+    }
+
+    .timeline-dot {
+        margin-left: -43px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .timeline-content {
+        margin-left: 12px;
+        padding: 24px 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    .our-stories {
+        padding: 80px 15px;
+    }
+
+    .section-title {
+        font-size: 48px;
+        margin-bottom: -15px;
+    }
+}
+
+/* Contribute Section */
+.contribute-section {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.contribute-card {
+    background: linear-gradient(135deg, #1e2937 0%, #0f172a 100%);
+    color: white;
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.contribute-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #c9a44b;
+}
+
+.contribute-card p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    color: #cbd5e1;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #25d366;
+    color: white;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-btn i {
+    font-size: 1.4rem;
+}
+
+/* Responsive for Contribute Section */
+@media (max-width: 768px) {
+    .contribute-card {
+        padding: 40px 25px;
+    }
+    
+    .contribute-card h3 {
+        font-size: 1.5rem;
+    }
+    
+    .whatsapp-btn {
+        padding: 12px 28px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contribute-section {
+        margin-top: 60px;
+    }
+    
+    .contribute-card {
+        padding: 35px 20px;
+    }
+}
