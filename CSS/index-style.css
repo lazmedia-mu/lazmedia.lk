@@ -1,11 +1,4 @@
-/* Custom Font Import - Black Gothics by NihStudio */
-@font-face {
-    font-family: 'BlackGothics';
-    src: url('../Assets/Fonts/BlackGothicsDemoRegular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
+/* Fonts - Playfair Display for headings, Lora for body (already imported in HTML) */
 
 /* ==================== INTRODUCTION SECTION ==================== */
 .intro-section {
@@ -70,7 +63,7 @@
 }
 
 .church-name {
-    font-family: 'ITC Eras Demi', sans-serif;
+    font-family: 'ITC Eras Demi';
     font-size: 48px;
     font-weight: 700;
     color: #1e2937;
@@ -201,16 +194,10 @@
     text-transform: uppercase;
 }
 
-@font-face {
-    font-family: 'black Gothics by NihStudio';
-    src: url('../Assets/Fonts/BlackGothicsDemoRegular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
+
 
 .section-title {
-    font-family: 'BlackGothics', serif;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
     font-size: 48px;
     font-weight: 700;
     color: #1e2937;
@@ -452,7 +439,7 @@
     }
 
     .section-title {
-        font-family: 'BlackGothics', serif;
+        font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
         font-size: 39px;
         margin-top: 0;
         text-shadow: 0px 4px 15px #c9a44b;
@@ -480,7 +467,7 @@
     margin-bottom: 10px;
     font-size: 42px;
     font-weight: 700;
-    font-family: 'BlackGothics', serif;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
     text-shadow: 0px 6px 4px rgb(187 161 107 / 77%);
 }
 

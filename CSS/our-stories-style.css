@@ -1,11 +1,5 @@
 /* Custom Font Import - Black Gothics by NihStudio */
-@font-face {
-    font-family: 'BlackGothics';
-    src: url('../Assets/Fonts/BlackGothicsDemoRegular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
+
 
 .our-stories {
     padding: 100px 20px;
@@ -30,7 +24,7 @@
 }
 
 .section-title {
-    font-family: 'BlackGothics', serif;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
     margin-top: 0;
     text-shadow: 0 4px 8px #c9a44b;
     font-size: 48px;
