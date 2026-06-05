@@ -1,0 +1,448 @@
+/* ====================== Donation Hero Section ====================== */
+.donation-hero {
+    margin-top: 50px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), 
+                      url('../Assets/Donations/Donation-Title-Banner.JPG');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.donation-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    color: #ffffff;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.3rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: 'Lora', Georgia, 'Times New Roman', Times, serif;
+}
+
+/* ====================== Main Donation Section ====================== */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.donation-section {
+    padding: 80px 0;
+    background: #f8f5ee;
+}
+
+.donation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.section-title {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e2937;
+    margin-bottom: 25px;
+    text-shadow: 0px 4px 15px #c9a44b;
+}
+
+.project-description {
+    font-family: 'Lora', Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #374151;
+    margin-bottom: 20px;
+}
+
+/* Renovation Highlights */
+.renovation-highlights {
+    margin: 40px 0;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.renovation-highlights h3 {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    color: #1e2937;
+    margin-bottom: 20px;
+}
+
+.renovation-highlights ul {
+    list-style: none;
+    padding: 0;
+}
+
+.renovation-highlights li {
+    font-family: 'Lora', Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.05rem;
+    padding: 10px 0;
+    color: #374151;
+}
+
+.renovation-highlights i {
+    color: #c9a44b;
+    margin-right: 12px;
+}
+
+/* Bible Verse */
+.bible-verse {
+    margin-top: 40px;
+    padding: 30px;
+    background: #1e2937;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.bible-verse blockquote {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-style: italic;
+    margin: 0;
+}
+
+.bible-verse cite {
+    display: block;
+    margin-top: 15px;
+    font-family: 'Lora', Georgia, 'Times New Roman', Times, serif;
+    color: #c9a44b;
+    font-size: 1rem;
+    font-style: normal;
+}
+
+/* Fundraising Progress Section */
+.progress-section {
+    margin-top: 40px;
+    padding: 35px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.progress-section h3 {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.8rem;
+    color: #1e2937;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.goal-stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.stat-label {
+    font-family: 'Lora', Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    color: #374151;
+}
+
+.stat-value {
+    font-family: 'ITC Eras Demi', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #1e2937;
+}
+
+.raised-amount {
+    color: #059669;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 24px;
+    background: #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #c9a44b, #d4af37);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 15px;
+    transition: width 1.5s ease-out;
+}
+
+.progress-percentage {
+    font-family: 'ITC Eras Demi', sans-serif;
+    color: #1e2937;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.progress-note {
+    font-family: 'Lora', Georgia, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #374151;
+    text-align: center;
+    margin: 0;
+    font-style: italic;
+}
+
+/* Expenses Breakdown Section */
+.expenses-section {
+    margin-top: 40px;
+    padding: 35px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.expenses-section h3 {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.8rem;
+    color: #1e2937;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.expenses-intro {
+    font-family: 'Lora', Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #374151;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.expenses-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.expense-item {
+    padding: 20px;
+    background: #f8f5ee;
+    border-radius: 8px;
+    border-left: 4px solid #c9a44b;
+}
+
+.expense-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.expense-title {
+    font-family: 'ITC Eras Demi', sans-serif;
+    font-size: 1.1rem;
+    color: #1e2937;
+}
+
+.expense-amount {
+    font-family: 'ITC Eras Demi', sans-serif;
+    font-size: 1.05rem;
+    color: #1e2937;
+    font-weight: 600;
+}
+
+.expense-bar-container {
+    width: 100%;
+    height: 12px;
+    background: #e5e7eb;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.expense-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #c9a44b, #d4af37);
+    border-radius: 6px;
+    width: 0%;
+    transition: width 1s ease-out;
+}
+
+.expense-description {
+    font-family: 'Lora', Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.95rem;
+    color: #6b7280;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+/* Donation Card */
+.donation-form-container {
+    position: sticky;
+    top: 100px;
+}
+
+.donation-card {
+    background: white;
+    border-radius: 16px;
+    padding: 40px 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.donation-card h3 {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    color: #1e2937;
+    text-align: center;
+    margin-bottom: 35px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #c9a44b;
+}
+
+.donation-card h4 {
+    font-family: 'ITC Eras Demi', sans-serif;
+    font-size: 1.2rem;
+    color: #1e2937;
+    margin-bottom: 18px;
+}
+
+.donation-card i {
+    color: #c9a44b;
+    margin-right: 8px;
+}
+
+/* Bank Details */
+.bank-details {
+    margin-bottom: 35px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.bank-info {
+    font-family: 'Lora', Georgia, 'Times New Roman', Times, serif;
+    color: #374151;
+    line-height: 1.8;
+}
+
+.bank-info p {
+    margin: 8px 0;
+}
+
+/* QR Section */
+.qr-section {
+    margin-bottom: 35px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: center;
+}
+
+.qr-placeholder {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    background: #f3f4f6;
+    border: 2px dashed #d1d5db;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lora', Georgia, 'Times New Roman', Times, serif;
+    color: #6b7280;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Contact Donate */
+.contact-donate {
+    font-family: 'Lora', Georgia, 'Times New Roman', Times, serif;
+    color: #374151;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.contact-donate p {
+    margin: 8px 0;
+}
+
+/* ====================== Responsive Styles ====================== */
+@media (max-width: 968px) {
+    .donation-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .donation-form-container {
+        position: static;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .goal-stats {
+        gap: 10px;
+    }
+    
+    .stat-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .expense-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .donation-hero {
+        padding: 60px 20px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .donation-section {
+        padding: 50px 0;
+    }
+    
+    .donation-card {
+        padding: 30px 20px;
+    }
+    
+    .bible-verse blockquote {
+        font-size: 1.2rem;
+    }
+}

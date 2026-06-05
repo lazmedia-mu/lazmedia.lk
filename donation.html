@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Catholic parish located in Kurukulawa, Ragama, Sri Lanka, under the Archdiocese of Colombo. Dedicated to St. Lazarus.">
+    <title>St. Lazarus' Church - Kurukulawa</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Lora:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/457055c70a9c98aa64002f05d6652edc?family=ITC+Eras+Demi" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/essential-style.css">
+    <link rel="stylesheet" href="CSS/index-style.css">
+    <link rel="stylesheet" href="CSS/donation-style.css">
+    <link rel="stylesheet" href="CSS/countdown-style.css">
+    <link rel="icon" type="image/png" href="Assets/Essentials/Jubilee-logo.png">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div class="heads-up">
+        <div class="div1">
+            <img src="Assets/Essentials/CLI-logo-b.png" alt="St. Lazarus Church" class="title-logo">
+        </div>
+        <div class="div2"></div>
+        <div class="div3">
+            <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+        <div class="div4"></div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="menu-header">
+            <img src="Assets/Essentials/CLI-logo-b.png" alt="St. Lazarus Church" class="menu-logo">
+            <button class="close-btn" id="close-btn">X</button>
+        </div>
+
+        <nav class="menu-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Aww Site Error.html">Jubilee Site</a></li>
+                <li><a href="history.html">Our Stories</a></li>
+                <li><a href="priests.html">Our Priests</a></li>
+                <li><a href="societies.html">Our Societies</a></li>
+                <li><a href="gallery.html">Church Gallery</a></li>
+                <li><a href="news.html">Church News</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="donation.html" class="active">Make a Donation</a></li>
+            </ul>
+        </nav>
+
+        <div class="menu-footer">
+            <a href="donation.html" class="menu-donate-btn">Donations</a>
+        </div>
+    </div>
+
+    <!-- DONATION HERO SECTION -->
+    <section class="donation-hero">
+        <div class="container">
+            <div class="donation-hero-content">
+                <h1 class="hero-title">Support Our Church Renovations</h1>
+                <p class="hero-subtitle">Help us preserve our sacred space for future generations of faith and community
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN DONATION SECTION -->
+    <section class="donation-section">
+        <div class="container">
+            <div class="donation-grid">
+                <!-- Left: Project Info -->
+                <div class="project-info">
+                    <h2 class="section-title">Join Us in Renewing Our Church</h2>
+                    <p class="project-description">
+                        St. Lazarus' Church has stood as a beacon of faith in Kurukulawa since 1926. As we approach our
+                        centenary celebrations, we are undertaking essential renovations to preserve and enhance our
+                        sacred space for generations to come.
+                    </p>
+                    <p class="project-description">
+                        Your generous contributions will support critical improvements including structural repairs,
+                        interior renovations, accessibility enhancements, and modernized facilities that will serve our
+                        parish community for decades.
+                    </p>
+
+                    <div class="renovation-highlights">
+                        <h3>Renovation Projects Include:</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Structural strengthening and repairs</li>
+                            <li><i class="fas fa-check"></i> Interior restoration and painting</li>
+                            <li><i class="fas fa-check"></i> Accessibility improvements for all parishioners</li>
+                            <li><i class="fas fa-check"></i> Modernized parish facilities</li>
+                            <li><i class="fas fa-check"></i> Centenary celebration preparations</li>
+                        </ul>
+                    </div>
+
+                    <div class="bible-verse">
+                        <blockquote>
+                            "The Lord loves a cheerful giver."
+                            <cite>— 2 Corinthians 9:7</cite>
+                        </blockquote>
+                    </div>
+
+                    <!-- Fundraising Progress Section -->
+                    <div class="progress-section">
+                        <h3>Our Fundraising Progress</h3>
+                        <div class="goal-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Goal Amount:</span>
+                                <span class="stat-value goal-amount" id="goal-amount">LKR 0</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Raised So Far:</span>
+                                <span class="stat-value raised-amount" id="raised-amount">LKR 0</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Remaining:</span>
+                                <span class="stat-value remaining-amount" id="remaining-amount">LKR 0</span>
+                            </div>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="progress-bar">
+                                <span class="progress-percentage" id="progress-percentage">0%</span>
+                            </div>
+                        </div>
+                        <p class="progress-note">Thank you to all our generous donors who have helped us reach this
+                            milestone! Every contribution brings us closer to completing these essential renovations.
+                        </p>
+                    </div>
+
+                    <!-- Expenses Breakdown Section -->
+                    <div class="expenses-section">
+                        <h3>How Funds Will Be Allocated</h3>
+                        <p class="expenses-intro">Your donations directly support these critical renovation projects.
+                            Every rupee contributes to preserving our sacred space for future generations.</p>
+                        <div class="expenses-grid" id="expenses-grid">
+                            <!-- Expense items will be auto-populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Donation Form/Cards -->
+                <div class="donation-form-container">
+                    <div class="donation-card">
+                        <h3>Make a Donation</h3>
+
+                        <!-- Bank Transfer Details -->
+                        <div class="bank-details">
+                            <h4><i class="fas fa-university"></i> Bank Transfer</h4>
+                            <div class="bank-info">
+                                <p><strong>Bank Name:</strong> [Your Bank Name]</p>
+                                <p><strong>Account Name:</strong> St. Lazarus' Church Kurukulawa</p>
+                                <p><strong>Account Number:</strong> [XXXX-XXXX-XXXX-XXXX]</p>
+                                <p><strong>Branch:</strong> Ragama</p>
+                                <p><strong>Swift Code:</strong> XXXXXX</p>
+                            </div>
+                        </div>
+
+                        <!-- QR Code Section -->
+                        <div class="qr-section">
+                            <h4><i class="fas fa-qrcode"></i> Scan to Pay</h4>
+                            <div class="qr-placeholder">
+                                <p>Add your payment QR code here</p>
+                            </div>
+                        </div>
+
+                        <!-- Contact for Donations -->
+                        <div class="contact-donate">
+                            <p>For more information about donating, please contact the parish office:</p>
+                            <p><i class="fas fa-phone"></i> +94 112 958 637</p>
+                            <p><i class="fas fa-envelope"></i> sanlasarusch1926@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <!-- Column 1: Logo -->
+                <div class="footer-col">
+                    <img src="Assets/Essentials/CLI-logo-b.png" alt="St. Lazarus Church" class="footer-logo">
+                    <p class="arch-ds-style">Colombo Archdiocese</p>
+                    <p class="footcol1-desc">A beacon of faith since 1926. Celebrating 100 years of devotion in
+                        2026.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home-sweet-home">Home</a></li>
+                        <li><a href="about.html">About Our Parish</a></li>
+                        <li><a href="#mass-schedule">Mass Schedule</a></li>
+                        <li><a href="#what's-on">Ongoing Events</a></li>
+                        <li><a href="news.html">News Feed</a></li>
+                        <li><a href="#church-archive-s">Church Archives</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact Info -->
+                <div class="footer-col">
+                    <h4>Contacts</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>St. Lazarus Church,<br>Kurukulawa, Ragama,<br>11101,<br> Sri Lanka</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <p>+94 112 958 637</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>sanlasarusch1926@gmail.com</p>
+                    </div>
+                </div>
+
+                <!-- Column 4: Social Media -->
+                <div class="footer-col">
+                    <h4>Follow us On</h4>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/share/1Ct8vRTfdm/" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/lazmedia_1926?igsh=aGY2OTF1b3FpdWQ2" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@slc-x3f?si=l3OjjDi_9ATM761b" target="_blank"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="Aww Site Error.html" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Rule of Copyright -->
+        <div class="footer-bottom">
+            <p>© 2026 St. Lazarus' Church Media, Kurukulawa. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="JS/essential-script.js"></script>
+    <script src="JS/donation-script.js"></script>
+</body>
+
+</html>
