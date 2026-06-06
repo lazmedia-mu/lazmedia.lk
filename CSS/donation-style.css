@@ -349,6 +349,10 @@
     margin: 8px 0;
 }
 
+.tagline-bank{
+    margin-top: 0px;
+}
+
 /* QR Section */
 .qr-section {
     margin-bottom: 35px;
@@ -373,16 +377,234 @@
     padding: 20px;
 }
 
-/* Contact Donate */
-.contact-donate {
-    font-family: 'Lora', Georgia, 'Times New Roman', Times, serif;
-    color: #374151;
-    line-height: 1.8;
-    text-align: center;
+/* Payment Tabs */
+.payment-tabs {
+    display: flex;
+    margin-bottom: 30px;
+    background: #f8f5ee;
+    border-radius: 10px;
+    padding: 5px;
 }
 
-.contact-donate p {
-    margin: 8px 0;
+.tab-btn {
+    flex: 1;
+    padding: 15px 10px;
+    border: none;
+    background: transparent;
+    font-family: 'ITC Eras Demi', sans-serif;
+    font-size: 0.95rem;
+    color: #6b7280;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    background: #c9a44b;
+    color: #1e2937;
+    box-shadow: 0 2px 10px rgba(201, 164, 75, 0.3);
+}
+
+.tab-btn:hover:not(.active) {
+    color: #1e2937;
+    background: rgba(201, 164, 75, 0.1);
+}
+
+/* Tab Content */
+.tab-panel {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Info Banner */
+.info-banner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    background: #fef3c7;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    font-family: 'Lora', Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.95rem;
+    color: #92400e;
+}
+
+.info-banner i {
+    color: #d97706;
+    margin-right: 0;
+}
+
+/* Bank Details Grid */
+.bank-details-grid {
+    display: grid;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.bank-detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background: #f8f5ee;
+    border-radius: 8px;
+}
+
+.detail-label {
+    font-family: 'Lora', Georgia, 'Times New Roman', Times, serif;
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+
+.detail-value {
+    font-family: 'ITC Eras Demi', sans-serif;
+    color: #1e2937;
+    font-size: 1rem;
+}
+
+.copyable {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+}
+
+.copyable:hover {
+    color: #c9a44b;
+}
+
+/* QR Container */
+.qr-container {
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Confirmation Section */
+.confirmation-section {
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.confirmation-header h4 {
+    margin-bottom: 20px;
+}
+
+.confirmation-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.step-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: 'Lora', Georgia, 'Times New Roman', Times, serif;
+    color: #374151;
+}
+
+.step-number {
+    width: 30px;
+    height: 30px;
+    background: #c9a44b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'ITC Eras Demi', sans-serif;
+    font-size: 0.9rem;
+    color: #1e2937;
+    flex-shrink: 0;
+}
+
+.email-cta {
+    padding: 20px;
+    background: #f0fdf4;
+    border-radius: 8px;
+    font-family: 'Lora', Georgia, 'Times New Roman', Times, serif;
+}
+
+.email-cta p {
+    margin: 0 0 10px 0;
+    color: #166534;
+}
+
+.email-cta ul {
+    margin: 0;
+    padding-left: 20px;
+    color: #15803d;
+}
+
+/* Contact Section */
+.contact-section h4 {
+    margin-bottom: 20px;
+}
+
+.contact-grid {
+    display: grid;
+    gap: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.contact-item-nh{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: #f8f5ee;
+    border-radius: 8px;
+}
+
+.contact-item i {
+    width: 40px;
+    height: 40px;
+    background: #c9a44b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0;
+    color: #1e2937;
+    flex-shrink: 0;
+}
+
+.contact-label {
+    display: block;
+    font-family: 'Lora', Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+.contact-value {
+    display: block;
+    font-family: 'ITC Eras Demi', sans-serif;
+    font-size: 0.95rem;
+    color: #1e2937;
 }
 
 /* ====================== Responsive Styles ====================== */

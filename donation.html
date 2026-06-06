@@ -154,32 +154,104 @@
                 <div class="donation-form-container">
                     <div class="donation-card">
                         <h3>Make a Donation</h3>
+                        
+                        <!-- Payment Method Tabs -->
+                        <div class="payment-tabs">
+                            <button class="tab-btn active" data-tab="bank-transfer"><i class="fas fa-university"></i> Bank Transfer</button>
+                            <button class="tab-btn" data-tab="qr-pay"><i class="fas fa-qrcode"></i> Scan to Pay</button>
+                        </div>
 
-                        <!-- Bank Transfer Details -->
-                        <div class="bank-details">
-                            <h4><i class="fas fa-university"></i> Bank Transfer</h4>
-                            <div class="bank-info">
-                                <p><strong>Bank Name:</strong> [Your Bank Name]</p>
-                                <p><strong>Account Name:</strong> St. Lazarus' Church Kurukulawa</p>
-                                <p><strong>Account Number:</strong> [XXXX-XXXX-XXXX-XXXX]</p>
-                                <p><strong>Branch:</strong> Ragama</p>
-                                <p><strong>Swift Code:</strong> XXXXXX</p>
+                        <!-- Tab Contents -->
+                        <div class="tab-content">
+                            <!-- Bank Transfer Details -->
+                            <div class="tab-panel active" id="bank-transfer">
+                                <div class="info-banner">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span>Donations are processed through the Archdiocese of Colombo</span>
+                                </div>
+                                <div class="bank-details-grid">
+                                    <div class="bank-detail-item">
+                                        <span class="detail-label">Bank Name</span>
+                                        <span class="detail-value">Commercial Bank</span>
+                                    </div>
+                                    <div class="bank-detail-item">
+                                        <span class="detail-label">Account Name</span>
+                                        <span class="detail-value">Archdiocese of Colombo</span>
+                                    </div>
+                                    <div class="bank-detail-item">
+                                        <span class="detail-label">Account Number</span>
+                                        <span class="detail-value copyable">1190029310 <i class="fas fa-copy" title="Click to copy"></i></span>
+                                    </div>
+                                    <div class="bank-detail-item">
+                                        <span class="detail-label">Branch</span>
+                                        <span class="detail-value">Borella</span>
+                                    </div>
+                                    <div class="bank-detail-item">
+                                        <span class="detail-label">Swift Code</span>
+                                        <span class="detail-value copyable">CCEYLKLX <i class="fas fa-copy" title="Click to copy"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- QR Code Section -->
+                            <div class="tab-panel" id="qr-pay">
+                                <div class="qr-container">
+                                    <div class="qr-placeholder">
+                                        <i class="fas fa-qrcode" style="font-size: 3rem; margin-bottom: 15px; color: #9ca3af;"></i>
+                                        <p>This facility is not available at this time.<br>Please use bank transfer instead.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- QR Code Section -->
-                        <div class="qr-section">
-                            <h4><i class="fas fa-qrcode"></i> Scan to Pay</h4>
-                            <div class="qr-placeholder">
-                                <p>Add your payment QR code here</p>
+                        <!-- Donation Confirmation Section -->
+                        <div class="confirmation-section">
+                            <div class="confirmation-header">
+                                <h4><i class="fas fa-clipboard-check"></i> After Making Your Donation</h4>
+                            </div>
+                            <div class="confirmation-steps">
+                                <div class="step-item">
+                                    <span class="step-number">1</span>
+                                    <p>Complete your bank transfer</p>
+                                </div>
+                                <div class="step-item">
+                                    <span class="step-number">2</span>
+                                    <p>Take a photo of your donation slip</p>
+                                </div>
+                                <div class="step-item">
+                                    <span class="step-number">3</span>
+                                    <p>Email the details to our parish office</p>
+                                </div>
+                            </div>
+                            <div class="email-cta">
+                                <p><strong>Please include in your email:</strong></p>
+                                <ul>
+                                    <li>Your full name</li>
+                                    <li>Contact information</li>
+                                    <li>Photo of the donation slip</li>
+                                </ul>
                             </div>
                         </div>
 
-                        <!-- Contact for Donations -->
-                        <div class="contact-donate">
-                            <p>For more information about donating, please contact the parish office:</p>
-                            <p><i class="fas fa-phone"></i> +94 112 958 637</p>
-                            <p><i class="fas fa-envelope"></i> sanlasarusch1926@gmail.com</p>
+                        <!-- Contact Information -->
+                        <div class="contact-section">
+                            <h4><i class="fas fa-address-card"></i> Need Help?</h4>
+                            <div class="contact-grid">
+                                <div class="contact-item-nh">
+                                    <i class="fas fa-phone"></i>
+                                    <div>
+                                        <span class="contact-label">Call Us</span>
+                                        <span class="contact-value">+94 112 958 637</span>
+                                    </div>
+                                </div>
+                                <div class="contact-item-nh">
+                                    <i class="fas fa-envelope"></i>
+                                    <div>
+                                        <span class="contact-label">Email Us</span>
+                                        <span class="contact-value">sanlasarusch1926@gmail.com</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -242,7 +314,7 @@
                                 class="fab fa-instagram"></i></a>
                         <a href="https://youtube.com/@slc-x3f?si=l3OjjDi_9ATM761b" target="_blank"><i
                                 class="fab fa-youtube"></i></a>
-                        <a href="Aww Site Error.html" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="Aww Site Error.html" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 

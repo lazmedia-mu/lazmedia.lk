@@ -1,15 +1,15 @@
 // Fundraising Progress Calculator
 // Simply update these two values, and everything else auto-calculates
-const FUNDRAISING_GOAL = 100000000;  // Total goal in LKR - UPDATE THIS
-const AMOUNT_RAISED = 8750000;      // Amount raised so far in LKR - UPDATE THIS
+const FUNDRAISING_GOAL = 35000000;  // Total goal in LKR - UPDATE THIS
+const AMOUNT_RAISED = 16000000;      // Amount raised so far in LKR - UPDATE THIS
 
 // Expenses Allocation - Update these to match your actual budget
 // Format: { title: 'Project Name', amount: Allocation in LKR, description: 'Details about this expense' }
 const EXPENSES = [
     {
-        title: 'Church Roof Renovation',
-        amount: 35000000,
-        description: 'Complete replacement of the main sanctuary roof including structural repairs and waterproofing'
+        title: 'Church Structure Renovation',
+        amount: 13000000,
+        description: 'Structural repairs and waterproofing of the main sanctuary structure'
     }
 ];
 
@@ -85,19 +85,70 @@ function renderExpenses() {
     });
 }
 
+// Tab Switching Functionality
+function initPaymentTabs() {
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+    
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const targetTab = button.getAttribute('data-tab');
+            
+            // Remove active class from all buttons and panels
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabPanels.forEach(panel => panel.classList.remove('active'));
+            
+            // Add active class to clicked button and corresponding panel
+            button.classList.add('active');
+            const targetPanel = document.getElementById(targetTab);
+            if (targetPanel) {
+                targetPanel.classList.add('active');
+            }
+        });
+    });
+}
+
+// Copy to Clipboard Functionality
+function initCopyToClipboard() {
+    const copyableElements = document.querySelectorAll('.copyable');
+    
+    copyableElements.forEach(element => {
+        element.addEventListener('click', async () => {
+            // Extract the text content without the icon
+            const textToCopy = element.textContent.replace(/[^0-9A-Za-z]/g, '').trim();
+            
+            try {
+                await navigator.clipboard.writeText(textToCopy);
+                
+                // Show success feedback
+                const originalHTML = element.innerHTML;
+                element.innerHTML = textToCopy + ' <i class="fas fa-check" style="color: #059669;"></i>';
+                
+                // Reset after 2 seconds
+                setTimeout(() => {
+                    element.innerHTML = originalHTML;
+                }, 2000);
+            } catch (err) {
+                console.error('Failed to copy text: ', err);
+            }
+        });
+    });
+}
+
 // Initialize when page loads
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
         updateFundraisingProgress();
         renderExpenses();
+        initPaymentTabs();
+        initCopyToClipboard();
     });
 } else {
     updateFundraisingProgress();
     renderExpenses();
+    initPaymentTabs();
+    initCopyToClipboard();
 }
-document.getElementById('goal-amount').textContent = formatCurrency(FUNDRAISING_GOAL);
-document.getElementById('raised-amount').textContent = formatCurrency(AMOUNT_RAISED);
-document.getElementById('remaining-amount').textContent = formatCurrency(Math.max(remainingAmount, 0));
 document.getElementById('progress-percentage').textContent = Math.round(percentage) + '%';
 
 // Animate progress bar

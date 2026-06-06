@@ -8,6 +8,26 @@ const albumData = {
             { src: "Assets/Gallery/Album Card 1/histroArch3.jpeg", caption: "Behind the scenes" },
             { src: "Assets/Gallery/Album Card 1/histroArch4.jpeg", caption: "Team spent day and night to launch the website" }
         ]
+    },
+
+    testdriveA: {
+        title: "Testdrive A",
+        photos: [
+            { src: "Assets/Gallery/Album Card 1/histroArch1.jpeg", caption: "Introduction of this new platform" },
+            { src: "Assets/Gallery/Album Card 1/histroArch2.jpeg", caption: "First interaction with the website" },
+            { src: "Assets/Gallery/Album Card 1/histroArch3.jpeg", caption: "Behind the scenes" },
+            { src: "Assets/Gallery/Album Card 1/histroArch4.jpeg", caption: "Team spent day and night to launch the website" }
+        ]
+    },
+
+    testdriveB: {
+        title: "Testdrive B",
+        photos: [
+            { src: "Assets/Gallery/Album Card 1/histroArch1.jpeg", caption: "Introduction of this new platform" },
+            { src: "Assets/Gallery/Album Card 1/histroArch2.jpeg", caption: "First interaction with the website" },
+            { src: "Assets/Gallery/Album Card 1/histroArch3.jpeg", caption: "Behind the scenes" },
+            { src: "Assets/Gallery/Album Card 1/histroArch4.jpeg", caption: "Team spent day and night to launch the website" }
+        ]
     }
 };
 
