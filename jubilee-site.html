@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Catholic parish located in Kurukulawa, Ragama, Sri Lanka, under the Archdiocese of Colombo. Dedicated to St. Lazarus.">
+    <title>Centennial Jubilee - St. Lazarus' Church</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Lora:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/457055c70a9c98aa64002f05d6652edc?family=ITC+Eras+Demi" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/essential-style.css">
+    <link rel="stylesheet" href="CSS/Jubilee-site-style.css">
+    <link rel="stylesheet" href="CSS/countdown-style.css">
+    <link rel="icon" type="image/png" href="Assets/Essentials/Jubilee-logo.png">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div class="heads-up">
+        <div class="div1">
+            <img src="Assets/Essentials/CLI-logo-b.png" alt="St. Lazarus Church" class="title-logo">
+        </div>
+        <div class="div2"></div>
+        <div class="div3">
+            <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+        <div class="div4"></div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="menu-header">
+            <img src="Assets/Essentials/CLI-logo-b.png" alt="St. Lazarus Church" class="menu-logo">
+            <button class="close-btn" id="close-btn">X</button>
+        </div>
+
+        <nav class="menu-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jubilee-site.html">Jubilee Site</a></li>
+                <li><a href="history.html">Our Stories</a></li>
+                <li><a href="priests.html">Our Priests</a></li>
+                <li><a href="societies.html">Our Societies</a></li>
+                <li><a href="gallery.html">Church Gallery</a></li>
+                <li><a href="news.html">Church News</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="isntitutions-in-church.html">Religious Institutions</a></li>
+            </ul>
+        </nav>
+
+        <div class="menu-footer">
+            <a href="donation.html" class="menu-donate-btn">Donations</a>
+        </div>
+    </div>
+    </div>
+
+    <!-- JUBILEE HERO SECTION - Simplified Design -->
+    <section class="jubilee-hero">
+        <div class="container">
+            <div class="hero-content simple-layout">
+                <!-- Event Information - Left Side -->
+                <div class="event-info">
+                    <p class="church-name">St. Lazarus' Church</p>
+                    <h2 class="event-title">Centennial Jubilee 2026</h2>
+                    <p class="event-desc">Join our parish family as we celebrate 100 years of faith, hope, and love in
+                        Kurukulawa. A century of blessings continues.</p>
+                    <div class="hero-buttons">
+                        <a href="#events" class="btn btn-primary">View Events</a>
+                        <a href="history.html" class="btn btn-secondary">Our Journey</a>
+                    </div>
+                </div>
+                <!-- Floating 2D Logo - Right Side -->
+                <div class="logo-container">
+                    <div class="floating-logo">
+                        <img src="Assets/Essentials/Jubilee-logo.png" alt="Jubilee Logo" class="jubilee-logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--=============================Jubilee Countdown Section=============================-->
+    <section class="jubilee-countdown">
+        <div class="countdown-container">
+            <p class="centennial">Centennial Celebration</p>
+            <h2 class="main-title">Time Until Jubilee</h2>
+            <p class="description">Join us as we prepare for this historic celebration of 100 years of faith and
+                community at St. Lazarus' Church.</p>
+
+            <div class="countdown-timer">
+                <div class="time-block">
+                    <span class="number" id="days">00</span>
+                    <span class="label">Days</span>
+                </div>
+                <div class="time-block">
+                    <span class="number" id="hours">00</span>
+                    <span class="label">Hours</span>
+                </div>
+                <div class="time-block">
+                    <span class="number" id="minutes">00</span>
+                    <span class="label">Minutes</span>
+                </div>
+                <div class="time-block">
+                    <span class="number" id="seconds">00</span>
+                    <span class="label">Seconds</span>
+                </div>
+            </div>
+
+            <p class="pray-text">Proudly Celebrating 100 Years of Devotion in Faith at Kurukulawa.</p>
+        </div>
+    </section>
+
+    <!--=============================Jubilee Hymn Section=============================-->
+    <section class="jubilee-hymn">
+        <div class="hymn-container">
+            <div class="hymn-header">
+                <p class="hymn-subtitle">Centennial Tribute</p>
+                <h2 class="hymn-title">Jubilee Hymn</h2>
+                <p class="hymn-desc">Listen to our special centennial hymn composed for this historic celebration of
+                    faith and community.</p>
+            </div>
+
+            <!-- Audio Player -->
+            <div class="audio-player-wrapper">
+                <div class="audio-player">
+                    <audio id="jubileeAudio" controls preload="metadata">
+                        <source src="Assets/Jubilee Site/Jubilee-Hymn-Test-Version.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <div class="player-controls">
+                        <a href="Assets/Jubilee Site/Jubilee-Hymn-Test-Version.mp3"
+                            download="St-Lazarus-Jubilee-Hymn-Test-Version.mp3" class="btn btn-download"
+                            rel="noopener noreferrer">
+                            <i class="fas fa-download"></i> Download Hymn
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hymn Credits -->
+            <div class="hymn-credits">
+                <div class="credits-grid">
+                    <div class="credit-item">
+                        <span class="credit-label">Lyrics by</span>
+                        <span class="credit-name">[Lyricist Name]</span>
+                    </div>
+                    <div class="credit-item">
+                        <span class="credit-label">Music by</span>
+                        <span class="credit-name">[Composer Name]</span>
+                    </div>
+                    <div class="credit-item">
+                        <span class="credit-label">Preformed by</span>
+                        <span class="credit-name">[Vocalist / Choir Name]</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright Message -->
+            <div class="copyright-notice">
+                <p><i class="fas fa-copyright"></i> 2026 St. Lazarus' Church, Kurukulawa. All Rights Reserved.<br>
+                    This hymn is protected by copyright law. Reproduction, distribution, or public performance without
+                    explicit permission is prohibited.</p>
+            </div>
+        </div>
+    </section>
+
+    <!--=============================Jubilee Messages Section=============================-->
+    <section class="jubilee-messages">
+        <div class="messages-container">
+            <div class="section-header">
+                <p class="section-subtitle">Centennial Greetings</p>
+                <h2 class="section-title">Jubilee Messages</h2>
+                <p class="section-desc">Words of blessing and celebration from our church leadership for this historic
+                    centennial.</p>
+            </div>
+
+            <div class="messages-grid">
+                <!-- Archbishop's Message -->
+                <div class="message-card">
+                    <div class="message-header">
+                        <div class="author-avatar">
+                            <i class="fas fa-cross"></i>
+                        </div>
+                        <div class="author-info">
+                            <h3>Archbishop of Colombo</h3>
+                            <p class="author-title">His Eminence, Cardinal Malcolm Ranjith</p>
+                        </div>
+                    </div>
+                    <!-- A4 Letterhead Image - Click to view fullscreen -->
+                    <div class="letterhead-placeholder"
+                        onclick="openLightbox('Assets/Jubilee Site/archbishop-letterhead-placeholder.jpg', 'Archbishop\'s official jubilee message')">
+                        <img src="Assets/Jubilee Site/archbishop-letterhead-placeholder.jpg"
+                            alt="Archbishop's official letter with letterhead" class="letterhead-image clickable-image"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="placeholder-fallback">
+                            <i class="fas fa-file-image"></i>
+                            <span>Click to add Archbishop's letterhead image (A4 size)</span>
+                            <span class="click-hint"><i class="fas fa-search-plus"></i> Click to view fullscreen</span>
+                        </div>
+                    </div>
+                    <div class="image-caption">
+                        <p class="signature-name"
+                            style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.2rem; color: #a77f1e;">
+                            Cardinal Malcolm Ranjith</p>
+                        <p class="signature-title">Archbishop of Colombo</p>
+                    </div>
+                </div>
+
+                <!-- Parish Priest's Message -->
+                <div class="message-card">
+                    <div class="message-header">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-priest"></i>
+                        </div>
+                        <div class="author-info">
+                            <h3>Parish Priest</h3>
+                            <p class="author-title">Rev. [Parish Priest Name]</p>
+                        </div>
+                    </div>
+                    <!-- A4 Letterhead Image - Click to view fullscreen -->
+                    <div class="letterhead-placeholder"
+                        onclick="openLightbox('Assets/Jubilee Site/parish-priest-letterhead-placeholder.jpg', 'Parish Priest\'s official jubilee message')">
+                        <img src="Assets/Jubilee Site/parish-priest-letterhead-placeholder.jpg"
+                            alt="Parish Priest's official letter with letterhead"
+                            class="letterhead-image clickable-image"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="placeholder-fallback">
+                            <i class="fas fa-file-image"></i>
+                            <span>Click to add Parish Priest's letterhead image (A4 size)</span>
+                            <span class="click-hint"><i class="fas fa-search-plus"></i> Click to view fullscreen</span>
+                        </div>
+                    </div>
+                    <div class="image-caption">
+                        <p class="signature-name"
+                            style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.2rem; color: #a77f1e;">
+                            Rev. [Parish Priest Name]</p>
+                        <p class="signature-title">Parish Priest, St. Lazarus' Church</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox for fullscreen image viewing -->
+    <div id="imageLightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightboxImage">
+        <div class="lightbox-caption"></div>
+    </div>
+
+
+    <!--=============================Jubilee Events Schedule Section=============================-->
+    <section class="jubilee-events" id="events">
+        <div class="events-container">
+            <div class="section-header">
+                <p class="section-subtitle">Centennial Celebrations</p>
+                <h2 class="section-title">Event Schedule</h2>
+                <p class="section-desc">Join us for a series of special events throughout our centennial jubilee year,
+                    celebrating 100 years of faith and community.</p>
+            </div>
+
+            <!-- Event Category Tabs -->
+            <div class="event-tabs">
+                <button class="tab-btn active" onclick="filterEvents('all', this)">All Events</button>
+                <button class="tab-btn" onclick="filterEvents('religious', this)">Religious Services</button>
+                <button class="tab-btn" onclick="filterEvents('cultural', this)">Cultural Events</button>
+                <button class="tab-btn" onclick="filterEvents('community', this)">Community Gatherings</button>
+            </div>
+
+            <!-- Events Timeline Grid -->
+            <div class="events-timeline" id="eventsTimeline">
+                <!-- Event 1 - Grand Opening Mass -->
+                <div class="event-card" data-category="religious">
+                    <div class="event-date">
+                        <span class="event-day">15</span>
+                        <span class="event-month">JAN</span>
+                        <span class="event-year">2026</span>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-category">
+                            <span class="category-tag religious">Religious Service</span>
+                        </div>
+                        <h3 class="event-title">Centennial Jubilee Opening Mass</h3>
+                        <p class="event-description">Solemn High Mass to officially inaugurate our centennial
+                            celebrations, with His Eminence Cardinal Malcolm Ranjith as the main celebrant.</p>
+                        <div class="event-details">
+                            <span><i class="fas fa-clock"></i> 10:00 AM</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Main Church Sanctuary</span>
+                        </div>
+                        <button class="event-expand-btn" onclick="toggleEventDetails(this)">
+                            More Details <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="event-expanded-content hidden">
+                            <p>Join us for this historic moment as we begin our year-long centennial celebrations. The
+                                mass will be followed by a fellowship luncheon in the parish hall. All parishioners and
+                                friends are welcome to attend this special occasion.</p>
+                            <div class="event-features">
+                                <span><i class="fas fa-check"></i> All parishioners welcome</span>
+                                <span><i class="fas fa-check"></i> Fellowship luncheon included</span>
+                                <span><i class="fas fa-check"></i> Live streaming available</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 2 - Cultural Pageant -->
+                <div class="event-card" data-category="cultural">
+                    <div class="event-date">
+                        <span class="event-day">28</span>
+                        <span class="event-month">FEB</span>
+                        <span class="event-year">2026</span>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-category">
+                            <span class="category-tag cultural">Cultural Event</span>
+                        </div>
+                        <h3 class="event-title">Centennial Cultural Pageant</h3>
+                        <p class="event-description">A spectacular showcase of multicultural performances celebrating
+                            our diverse parish community's rich heritage.</p>
+                        <div class="event-details">
+                            <span><i class="fas fa-clock"></i> 6:00 PM</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Parish Grounds</span>
+                        </div>
+                        <button class="event-expand-btn" onclick="toggleEventDetails(this)">
+                            More Details <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="event-expanded-content hidden">
+                            <p>Experience the vibrant cultural diversity of our parish family through song, dance, and
+                                dramatic performances. This evening of entertainment will feature participants from all
+                                age groups within our community.</p>
+                            <div class="event-features">
+                                <span><i class="fas fa-check"></i> Free admission for all</span>
+                                <span><i class="fas fa-check"></i> Food stalls available</span>
+                                <span><i class="fas fa-check"></i> Family friendly event</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 3 - Parish Feast Day -->
+                <div class="event-card" data-category="community">
+                    <div class="event-date">
+                        <span class="event-day">17</span>
+                        <span class="event-month">MAR</span>
+                        <span class="event-year">2026</span>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-category">
+                            <span class="category-tag community">Community Gathering</span>
+                        </div>
+                        <h3 class="event-title">St. Lazarus Feast Day Celebrations</h3>
+                        <p class="event-description">Our annual feast day celebrations with special thanksgiving mass,
+                            procession, and community festivities.</p>
+                        <div class="event-details">
+                            <span><i class="fas fa-clock"></i> 8:00 AM - 10:00 PM</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Entire Parish Compound</span>
+                        </div>
+                        <button class="event-expand-btn" onclick="toggleEventDetails(this)">
+                            More Details <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="event-expanded-content hidden">
+                            <p>Celebrate the feast of our patron saint, St. Lazarus, with a full day of religious and
+                                community activities including the grand procession, carnival games, and fireworks
+                                display in the evening.</p>
+                            <div class="event-features">
+                                <span><i class="fas fa-check"></i> Fireworks display</span>
+                                <span><i class="fas fa-check"></i> Grand procession</span>
+                                <span><i class="fas fa-check"></i> Carnival & games</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 4 - Thanksgiving Mass -->
+                <div class="event-card" data-category="religious">
+                    <div class="event-date">
+                        <span class="event-day">14</span>
+                        <span class="event-month">DEC</span>
+                        <span class="event-year">2026</span>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-category">
+                            <span class="category-tag religious">Religious Service</span>
+                        </div>
+                        <h3 class="event-title">Centennial Closing Thanksgiving Mass</h3>
+                        <p class="event-description">Thanksgiving Mass to conclude our centennial jubilee year, giving
+                            thanks for 100 years of God's blessings.</p>
+                        <div class="event-details">
+                            <span><i class="fas fa-clock"></i> 4:00 PM</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Main Church Sanctuary</span>
+                        </div>
+                        <button class="event-expand-btn" onclick="toggleEventDetails(this)">
+                            More Details <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="event-expanded-content hidden">
+                            <p>Join us as we give thanks to Almighty God for His abundant blessings over the past
+                                century. This concluding mass will be followed by a jubilee year gratitude dinner and
+                                celebration of what we've accomplished together.</p>
+                            <div class="event-features">
+                                <span><i class="fas fa-check"></i> Thanksgiving dinner</span>
+                                <span><i class="fas fa-check"></i> Year in review presentation</span>
+                                <span><i class="fas fa-check"></i> All parishioners invited</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <!-- Column 1: Logo -->
+                <div class="footer-col">
+                    <img src="Assets/Essentials/CLI-logo-b.png" alt="St. Lazarus Church" class="footer-logo">
+                    <p class="arch-ds-style">Colombo Archdiocese</p>
+                    <p class="footcol1-desc">A beacon of faith since 1926. Celebrating 100 years of devotion in
+                        2026.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home-sweet-home">Home</a></li>
+                        <li><a href="about.html">About Our Parish</a></li>
+                        <li><a href="#mass-schedule">Mass Schedule</a></li>
+                        <li><a href="#what's-on">Ongoing Events</a></li>
+                        <li><a href="news.html">News Feed</a></li>
+                        <li><a href="#church-archive-s">Church Archives</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact Info -->
+                <div class="footer-col">
+                    <h4>Contacts</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>St. Lazarus Church,<br>Kurukulawa, Ragama,<br>11101,<br> Sri Lanka</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <p>+94 112 958 637</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>sanlasarusch1926@gmail.com</p>
+                    </div>
+                </div>
+
+                <!-- Column 4: Social Media -->
+                <div class="footer-col">
+                    <h4>Follow us On</h4>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/share/1Ct8vRTfdm/" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/lazmedia_1926?igsh=aGY2OTF1b3FpdWQ2" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@slc-x3f?si=l3OjjDi_9ATM761b" target="_blank"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="https://whatsapp.com/channel/0029Valq95l0LKZMp50Chm3d" target="_blank"><i
+                                class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Rule of Copyright -->
+        <div class="footer-bottom">
+            <p>© 2026 St. Lazarus' Church Media, Kurukulawa. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="JS/essential-script.js"></script>
+    <script src="JS/countdown-script.js"></script>
+    <script src="JS/Jubilee-site-Script.js"></script>
+
+</body>
+
+</html>

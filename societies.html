@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Lora:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="CSS/essential-style.css">
     <link rel="stylesheet" href="CSS/societies-style.css">
     <link rel="icon" type="image/png" href="Assets/Essentials/Jubilee-logo.png">
@@ -44,15 +46,14 @@
         <nav class="menu-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="Aww Site Error.html">Jubilee Site</a></li>
+                <li><a href="jubilee-site.html">Jubilee Site</a></li>
                 <li><a href="history.html">Our Stories</a></li>
                 <li><a href="priests.html">Our Priests</a></li>
                 <li><a href="societies.html">Our Societies</a></li>
                 <li><a href="gallery.html">Church Gallery</a></li>
                 <li><a href="news.html">Church News</a></li>
                 <li><a href="contact-us.html">Contact Us</a></li>
-                <li><a href="Aww Site Error.html">Comming Soon</a></li>
-                <li><a href="Aww Site Error.html">Support Us</a></li>
+                <li><a href="isntitutions-in-church.html">Religious Institutions</a></li>
             </ul>
         </nav>
 
@@ -66,7 +67,8 @@
         <div class="container">
             <span class="since-when">Community of Faith</span>
             <h1 class="section-title">Our Parish Societies</h1>
-            <p class="section-subtitle">Active groups that bring our parish family together in service, worship, and fellowship</p>
+            <p class="section-subtitle">Active groups that bring our parish family together in service, worship, and
+                fellowship</p>
         </div>
     </section>
 
@@ -76,115 +78,207 @@
             <!-- Society Cards Grid -->
             <div class="societies-grid">
 
+                <!--=======================Update here=======================-->
                 <!-- Society Card 1 -->
-                <div class="society-card">
+                <div class="society-card" onclick="openSocietyModal('liturgical-committee')">
                     <div class="society-image">
-                        <img src="Assets/Societies/If-no-group-photoUse-PlaceHolder.jpeg" alt="St. Lazarus Media Circle" class="group-photo">
-                        <div class="society-badge">Digital & Media</div>
+                        <img src="Assets/Societies/If-no-group-photoUse-PlaceHolder.jpeg"
+                            alt="St. Lazarus Liturgical Committee" class="group-photo">
+                        <div class="society-badge">Liturgy</div>
                     </div>
                     <div class="society-content">
-                        <h3 class="society-name">St. Lazarus Media Circle</h3>
-                        <p class="society-description">Our media circle is a group of volunteers who share their skills in media production, editing, and promotion. We work together to create engaging and informative media content for our parish family.</p>
+                        <h3 class="society-name">St. Lazarus Liturgical Committee</h3>
+                        <p class="society-short-description">The Liturgical Committee of St. Lazarus' Church plans and
+                            coordinates all masses and sacraments, ensuring worship is reverent, orderly, and
+                            spiritually enriching for the entire parish community.</p>
                         <div class="society-meta">
-                            <span><i class="fas fa-users"></i> 10 Members</span>
-                            <span><i class="fas fa-calendar"></i> Daily Operations</span>
+                            <span><i class="fas fa-users"></i> (n) Members</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Society Card 2 -->
-                <div class="society-card">
+                <div class="society-card" onclick="openSocietyModal('sacred-heart')">
                     <div class="society-image">
-                        <img src="Assets/Societies/If-no-group-photoUse-PlaceHolder.jpeg" alt="St. Lazarus Media Circle" class="group-photo">
-                        <div class="society-badge">Digital & Media</div>
+                        <img src="Assets/Societies/If-no-group-photoUse-PlaceHolder.jpeg"
+                            alt="St. Lazarus Sacred Heart Society" class="group-photo">
+                        <div class="society-badge"></div>
                     </div>
                     <div class="society-content">
-                        <h3 class="society-name">St. Lazarus Media Circle</h3>
-                        <p class="society-description">Our media circle is a group of volunteers who share their skills in media production, editing, and promotion. We work together to create engaging and informative media content for our parish family.</p>
+                        <h3 class="society-name">St. Lazarus Sacred Heart Society</h3>
+                        <p class="society-short-description">The Sacred Heart Society fosters deep devotion to the
+                            Sacred Heart of Jesus through communal prayer, spiritual growth, and acts of charity within
+                            our parish.</p>
                         <div class="society-meta">
-                            <span><i class="fas fa-users"></i> 10 Members</span>
-                            <span><i class="fas fa-calendar"></i> Daily Operations</span>
+                            <span><i class="fas fa-users"></i> (n) Members</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Society Card 3 -->
-                <div class="society-card">
+                <div class="society-card" onclick="openSocietyModal('slsdssws')">
                     <div class="society-image">
-                        <img src="Assets/Societies/If-no-group-photoUse-PlaceHolder.jpeg" alt="St. Lazarus Media Circle" class="group-photo">
-                        <div class="society-badge">Digital & Media</div>
+                        <img src="Assets/Societies/If-no-group-photoUse-PlaceHolder.jpeg"
+                            alt="St. Lazarus Spiritual Development and Social services Welfare Society" class="group-photo">
+                        <div class="society-badge">Social Welfare</div>
                     </div>
                     <div class="society-content">
-                        <h3 class="society-name">St. Lazarus Media Circle</h3>
-                        <p class="society-description">Our media circle is a group of volunteers who share their skills in media production, editing, and promotion. We work together to create engaging and informative media content for our parish family.</p>
+                        <h3 class="society-name">St. Lazarus Spiritual Development and Social services Welfare Society</h3>
+                        <p class="society-short-description">The Spiritual Development and Social Services Welfare Society fosters deep spiritual growth and parish welfare through communal prayer, devotion to the Sacred Heart, and charitable outreach.</p>
                         <div class="society-meta">
-                            <span><i class="fas fa-users"></i> 10 Members</span>
-                            <span><i class="fas fa-calendar"></i> Daily Operations</span>
+                            <span><i class="fas fa-users"></i> (n) Members</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Society Card 4 -->
-                <div class="society-card">
+                <div class="society-card" onclick="openSocietyModal('welfare-society')">
                     <div class="society-image">
-                        <img src="Assets/Societies/If-no-group-photoUse-PlaceHolder.jpeg" alt="St. Lazarus Media Circle" class="group-photo">
-                        <div class="society-badge">Digital & Media</div>
+                        <img src="Assets/Societies/If-no-group-photoUse-PlaceHolder.jpeg"
+                            alt="St. Lazarus Welfare Society" class="group-photo">
+                        <div class="society-badge">Social Welfare</div>
                     </div>
                     <div class="society-content">
-                        <h3 class="society-name">St. Lazarus Media Circle</h3>
-                        <p class="society-description">Our media circle is a group of volunteers who share their skills in media production, editing, and promotion. We work together to create engaging and informative media content for our parish family.</p>
+                        <h3 class="society-name">St. Lazarus Welfare Society</h3>
+                        <p class="society-short-description">The Welfare Society fosters deep spiritual growth and parish welfare through communal prayer, devotion to the Sacred Heart, and charitable outreach.</p>
                         <div class="society-meta">
-                            <span><i class="fas fa-users"></i> 10 Members</span>
-                            <span><i class="fas fa-calendar"></i> Daily Operations</span>
+                            <span><i class="fas fa-users"></i> (n) Members</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Society Card 5 -->
-                <div class="society-card">
+                <div class="society-card" onclick="openSocietyModal('vincent-de-paul')">
                     <div class="society-image">
-                        <img src="Assets/Societies/If-no-group-photoUse-PlaceHolder.jpeg" alt="St. Lazarus Media Circle" class="group-photo">
-                        <div class="society-badge">Digital & Media</div>
+                        <img src="Assets/Societies/If-no-group-photoUse-PlaceHolder.jpeg"
+                            alt="Vincent de Paul Society" class="group-photo">
+                        <div class="society-badge">Charity</div>
                     </div>
                     <div class="society-content">
-                        <h3 class="society-name">St. Lazarus Media Circle</h3>
-                        <p class="society-description">Our media circle is a group of volunteers who share their skills in media production, editing, and promotion. We work together to create engaging and informative media content for our parish family.</p>
+                        <h3 class="society-name">Vincent de Paul Society</h3>
+                        <p class="society-short-description">The Society of St. Vincent de Paul is a global Catholic organization dedicated to serving the poor, lonely, and marginalized through direct, compassionate person-to-person assistance.</p>
                         <div class="society-meta">
-                            <span><i class="fas fa-users"></i> 10 Members</span>
-                            <span><i class="fas fa-calendar"></i> Daily Operations</span>
+                            <span><i class="fas fa-users"></i> (n) Members</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Society Card 6 -->
-                <div class="society-card">
+                <div class="society-card" onclick="openSocietyModal('marriage-ministry')">
                     <div class="society-image">
-                        <img src="Assets/Societies/If-no-group-photoUse-PlaceHolder.jpeg" alt="St. Lazarus Media Circle" class="group-photo">
+                        <img src="Assets/Societies/If-no-group-photoUse-PlaceHolder.jpeg"
+                            alt="St. Lazarus Marriage Ministry" class="group-photo">
+                        <div class="society-badge">Marriage</div>
+                    </div>
+                    <div class="society-content">
+                        <h3 class="society-name">St. Lazarus Marriage Ministry</h3>
+                        <p class="society-short-description">The Marriage Ministry supports couples at all stages of their journey, providing spiritual guidance, enrichment programs, and community support to build strong, Christ-centered marriages.</p>
+                        <div class="society-meta">
+                            <span><i class="fas fa-users"></i> (n) Members</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Society Card 7 -->
+                <div class="society-card" onclick="openSocietyModal('ssds')">
+                    <div class="society-image">
+                        <img src="Assets/Societies/If-no-group-photoUse-PlaceHolder.jpeg"
+                            alt="Sunday School Development Society" class="group-photo">
+                        <div class="society-badge">Development</div>
+                    </div>
+                    <div class="society-content">
+                        <h3 class="society-name">Sunday School Development Society</h3>
+                        <p class="society-short-description">The Development Society leads physical infrastructure projects, maintains church property, and manages structural enhancements to ensure a safe, functional, and welcoming environment for our parish.</p>
+                        <div class="society-meta">
+                            <span><i class="fas fa-users"></i> (n) Members</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Society Card VIP -->
+                <div class="society-card" onclick="openSocietyModal('media-unit')">
+                    <div class="society-image">
+                        <img src="Assets/Societies/If-no-group-photoUse-PlaceHolder.jpeg"
+                            alt="St. Lazarus Media Circle" class="group-photo">
                         <div class="society-badge">Digital & Media</div>
                     </div>
                     <div class="society-content">
                         <h3 class="society-name">St. Lazarus Media Circle</h3>
-                        <p class="society-description">Our media circle is a group of volunteers who share their skills in media production, editing, and promotion. We work together to create engaging and informative media content for our parish family.</p>
+                        <p class="society-short-description">St. Lazarus' Media Circle manages the parish's digital footprint, broadcasting live masses, sharing announcements, and capturing church events to keep parishioners connected both online and offline.</p>
                         <div class="society-meta">
-                            <span><i class="fas fa-users"></i> 10 Members</span>
-                            <span><i class="fas fa-calendar"></i> Daily Operations</span>
+                            <span><i class="fas fa-users"></i>10 Members</span>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Help Us Improve Section -->
-            <div class="contribute-section">
-                <div class="contribute-card">
-                    <h3>Help Us Improve This Page</h3>
-                    <p>Do you have photos of our parish societies, or information to add about any group? We'd love to include your contributions to celebrate all the active communities in our parish family. Contact us to share your memories and photos!</p>
-                    <a href="https://wa.me/94771070651?text=Hi,%20Lazmedia!%20I%20have%20information%20or%20photos%20to%20share%20about%20the%20societies%20at%20St.%20Lazarus'%20Church." target="_blank" class="whatsapp-btn">
-                        <i class="fab fa-whatsapp"></i>
-                        Contact Us on WhatsApp
-                    </a>
+
+                <!-- Society Modal Popup -->
+                <div class="modal-overlay" id="society-modal" onclick="closeModalOnOverlay(event)">
+                    <div class="society-modal">
+                        <button class="modal-close" onclick="closeSocietyModal()"><i class="fas fa-times"></i></button>
+                        <div class="modal-image" id="modal-image-container">
+                            <img src="" alt="" id="modal-image">
+                            <div class="modal-badge" id="modal-badge"></div>
+                        </div>
+                        <div class="modal-content">
+                            <h2 id="modal-name"></h2>
+                            <p class="society-full-description" id="modal-description"></p>
+                            <div class="society-details" id="modal-details"></div>
+                            <div class="society-motto-vision">
+                                <div class="motto-section">
+                                    <h4>Our Motto</h4>
+                                    <p id="modal-motto"></p>
+                                </div>
+                                <div class="vision-section">
+                                    <h4>Our Vision</h4>
+                                    <p id="modal-vision"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Society Modal Popup -->
+                <div class="modal-overlay" id="society-modal" onclick="closeModalOnOverlay(event)">
+                    <div class="society-modal">
+                        <button class="modal-close" onclick="closeSocietyModal()"><i class="fas fa-times"></i></button>
+                        <div class="modal-image" id="modal-image-container">
+                            <img src="" alt="" id="modal-image">
+                            <div class="modal-badge" id="modal-badge"></div>
+                        </div>
+                        <div class="modal-content">
+                            <h2 id="modal-name"></h2>
+                            <p class="society-full-description" id="modal-description"></p>
+                            <div class="society-details" id="modal-details"></div>
+                            <div class="society-motto-vision">
+                                <div class="motto-section">
+                                    <h4>Our Motto</h4>
+                                    <p id="modal-motto"></p>
+                                </div>
+                                <div class="vision-section">
+                                    <h4>Our Vision</h4>
+                                    <p id="modal-vision"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Help Us Improve Section -->
+                <div class="contribute-section">
+                    <div class="contribute-card">
+                        <h3>Help Us Improve This Page</h3>
+                        <p>Do you have photos of our parish societies, or information to add about any group? We'd love
+                            to include your contributions to celebrate all the active communities in our parish family.
+                            Contact us to share your memories and photos!</p>
+                        <a href="https://wa.me/94771070651?text=Hi,%20Lazmedia!%20I%20have%20information%20or%20photos%20to%20share%20about%20the%20societies%20at%20St.%20Lazarus'%20Church."
+                            target="_blank" class="whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i>
+                            Contact Us on WhatsApp
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- Footer -->
@@ -242,7 +336,8 @@
                                 class="fab fa-instagram"></i></a>
                         <a href="https://youtube.com/@slc-x3f?si=l3OjjDi_9ATM761b" target="_blank"><i
                                 class="fab fa-youtube"></i></a>
-                        <a href="https://whatsapp.com/channel/0029Valq95l0LKZMp50Chm3d" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://whatsapp.com/channel/0029Valq95l0LKZMp50Chm3d" target="_blank"><i
+                                class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
