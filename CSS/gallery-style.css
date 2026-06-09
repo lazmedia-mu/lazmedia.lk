@@ -85,6 +85,8 @@
     opacity: 0;
     transform: translateY(40px);
     transition: all 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+    text-decoration: none;
+    display: block;
 }
 
 .album-card.visible {
@@ -95,6 +97,16 @@
 .album-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Google Drive icon styling */
+.album-overlay .fa-google-drive {
+    color: #4285f4;
+}
+
+/* Google Drive icon styling */
+.album-overlay .fa-google-drive {
+    color: #4285f4;
 }
 
 .album-cover {
@@ -206,12 +218,10 @@
 
 .photo-card:hover img {
     transform: scale(1.05);
-}
-
 /* Contribute Section */
 .contribute-section {
-    margin-top: 80px;
-    text-align: center;
+    margin-top: 60px;
+}   text-align: center;
 }
 
 .contribute-card {
@@ -220,6 +230,7 @@
     padding: 50px 40px;
     border-radius: 20px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    text-align: center;
 }
 
 .contribute-card h3 {

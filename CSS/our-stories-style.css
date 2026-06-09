@@ -120,6 +120,83 @@
     line-height: 1.7;
 }
 
+/* Full Story & Know More Button */
+.full-story {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease, margin 0.5s ease;
+    opacity: 0;
+    margin-top: 0;
+}
+
+.timeline-content.expanded .full-story {
+    max-height: 1000px;
+    opacity: 1;
+    margin-top: 20px;
+}
+
+.know-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    color: #64748b;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-family: inherit;
+}
+
+.know-more-btn:hover {
+    color: #c9a44b;
+}
+
+.know-more-btn i {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.know-more-btn i {
+    transition: transform 0.3s ease;
+}
+
+.timeline-content.expanded .know-more-btn i {
+    transform: rotate(180deg);
+}
+
+.timeline-content.expanded .know-more-btn {
+    content: 'Show Less';
+}
+
+.timeline-content.expanded .know-more-btn span {
+    content: 'Show Less';
+}
+
+/* Blur effect for other items when one is expanded */
+.timeline-item.other-blurred .timeline-content {
+    filter: blur(3px);
+    opacity: 0.5;
+    transform: scale(0.98);
+    transition: all 0.4s ease;
+}
+
+.timeline-item .timeline-content {
+    transition: all 0.4s ease;
+}
+
+.timeline-content.expanded {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(201, 164, 75, 0.3);
+    z-index: 10;
+    position: relative;
+}
+
 /* Responsive - Mobile Fix */
 @media (max-width: 768px) {
     .timeline {
@@ -234,5 +311,10 @@
     
     .contribute-card {
         padding: 35px 20px;
+    }
+    
+    .know-more-btn {
+        padding: 8px 20px;
+        font-size: 0.9rem;
     }
 }
