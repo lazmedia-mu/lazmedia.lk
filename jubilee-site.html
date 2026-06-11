@@ -154,15 +154,15 @@
                 <div class="credits-grid">
                     <div class="credit-item">
                         <span class="credit-label">Lyrics by</span>
-                        <span class="credit-name">[Lyricist Name]</span>
+                        <span class="credit-name">Rev. Fr. Dilshan Fernando<br>(O.S.B)</span>
                     </div>
                     <div class="credit-item">
                         <span class="credit-label">Music by</span>
-                        <span class="credit-name">[Composer Name]</span>
+                        <span class="credit-name">Nimnada Jayamanna</span>
                     </div>
                     <div class="credit-item">
                         <span class="credit-label">Preformed by</span>
-                        <span class="credit-name">[Vocalist / Choir Name]</span>
+                        <span class="credit-name">St. Lazarus' Choir</span>
                     </div>
                 </div>
             </div>
@@ -262,7 +262,62 @@
 
 
     <!--=============================Jubilee Events Schedule Section=============================-->
-    
+    <section class="jubilee-events" id="events">
+        <div class="events-container">
+            <div class="section-header">
+                <p class="section-subtitle">Centennial Celebrations</p>
+                <h2 class="section-title">Event Schedule</h2>
+                <p class="section-desc">Join us for a series of special events throughout our centennial jubilee year,
+                    celebrating 100 years of faith and community.</p>
+            </div>
+
+            <!-- Event Category Tabs -->
+            <div class="event-tabs">
+                <button class="tab-btn active" onclick="filterEvents('all', this)">All Events</button>
+                <button class="tab-btn" onclick="filterEvents('religious', this)">Religious Services</button>
+                <button class="tab-btn" onclick="filterEvents('cultural', this)">Cultural Events</button>
+                <button class="tab-btn" onclick="filterEvents('community', this)">Community Gatherings</button>
+            </div>
+
+            <!-- Events Timeline Grid -->
+            <div class="events-timeline" id="eventsTimeline">
+                <!-- Event 1 - Grand Jubilee Mass -->
+                <div class="event-card" data-category="religious">
+                    <div class="event-date">
+                        <span class="event-day">13</span>
+                        <span class="event-month">SEP</span>
+                        <span class="event-year">2026</span>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-category">
+                            <span class="category-tag religious">Religious Service</span>
+                        </div>
+                        <h3 class="event-title">Centennial Jubilee Grand Mass</h3>
+                        <p class="event-description">Celebration Grand Mass with His Eminence Cardinal Malcolm Ranjith
+                            as the main celebrant.</p>
+                        <div class="event-details">
+                            <span><i class="fas fa-clock"></i> 8:00 AM</span>
+                            <span><i class="fas fa-map-marker-alt"></i> On the church premises</span>
+                        </div>
+                        <button class="event-expand-btn" onclick="toggleEventDetails(this)">
+                            More Details <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="event-expanded-content hidden">
+                            <p>Join us for this historic moment as we celebrate the grand mass of our centennial jubilee
+                                year. With His Eminence Cardinal Malcolm Ranjith as the main celebrant, we will
+                                celebrate the 100th anniversary of our church's foundation. with joy and gratitude.</p>
+                            <div class="event-features">
+                                <span><i class="fas fa-check"></i> All parishioners welcome</span>
+                                <span><i class="fas fa-check"></i> Live streaming available</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
 
 
 
