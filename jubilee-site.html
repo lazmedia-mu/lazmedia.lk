@@ -25,7 +25,7 @@
     <!-- HEADER -->
     <div class="heads-up">
         <div class="div1">
-            <img src="Assets/Essentials/CLI-logo-b.png" alt="St. Lazarus Church" class="title-logo">
+            <img src="Assets/Essentials/CLI-logo-c.png" alt="St. Lazarus Church" class="title-logo">
         </div>
         <div class="div2"></div>
         <div class="div3">
@@ -41,7 +41,7 @@
     <!-- MOBILE MENU -->
     <div class="mobile-menu" id="mobile-menu">
         <div class="menu-header">
-            <img src="Assets/Essentials/CLI-logo-b.png" alt="St. Lazarus Church" class="menu-logo">
+            <img src="Assets/Essentials/CLI-logo-c.png" alt="St. Lazarus Church" class="menu-logo">
             <button class="close-btn" id="close-btn">X</button>
         </div>
 
@@ -55,7 +55,7 @@
                 <li><a href="gallery.html">Church Gallery</a></li>
                 <li><a href="news.html">Church News</a></li>
                 <li><a href="contact-us.html">Contact Us</a></li>
-                <li><a href="isntitutions-in-church.html">Religious Institutions</a></li>
+                <li><a href="under-construction.html">Religious Institutions</a></li>
             </ul>
         </nav>
 
@@ -86,6 +86,13 @@
                         <img src="Assets/Essentials/Jubilee-logo.png" alt="Jubilee Logo" class="jubilee-logo">
                     </div>
                 </div>
+            </div>
+        </div>
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="mouse">
+                <div class="wheel"></div>
             </div>
         </div>
     </section>
@@ -226,7 +233,7 @@
                         </div>
                         <div class="author-info">
                             <h3>Parish Priest</h3>
-                            <p class="author-title">Rev. [Parish Priest Name]</p>
+                            <p class="author-title">Rev. Fr. Sisira Priyashantha</p>
                         </div>
                     </div>
                     <!-- A4 Letterhead Image - Click to view fullscreen -->
@@ -245,7 +252,7 @@
                     <div class="image-caption">
                         <p class="signature-name"
                             style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.2rem; color: #a77f1e;">
-                            Rev. [Parish Priest Name]</p>
+                            Rev. Fr. Sisira Priyashantha</p>
                         <p class="signature-title">Parish Priest, St. Lazarus' Church</p>
                     </div>
                 </div>
@@ -281,39 +288,160 @@
 
             <!-- Events Timeline Grid -->
             <div class="events-timeline" id="eventsTimeline">
-                <!-- Event 1 - Grand Jubilee Mass -->
-                <div class="event-card" data-category="religious">
+
+                <!-- Event 1 - ReOpen of the Church -->
+                <div class="event-card" data-category="cultural">
                     <div class="event-date">
-                        <span class="event-day">13</span>
+                        <span class="event-day">02</span>
                         <span class="event-month">SEP</span>
                         <span class="event-year">2026</span>
                     </div>
                     <div class="event-content">
                         <div class="event-category">
-                            <span class="category-tag religious">Religious Service</span>
+                            <span class="category-tag cultural">Cultural Events</span>
                         </div>
-                        <h3 class="event-title">Centennial Jubilee Grand Mass</h3>
-                        <p class="event-description">Celebration Grand Mass with His Eminence Cardinal Malcolm Ranjith
-                            as the main celebrant.</p>
+                        <h3 class="event-title">Grand Re-Open of the Church</h3>
+                        <p class="event-description">Join us for the grand re-open of our church after months of renovations and restoration works, celebrating 100 years of faith and community.</p>
                         <div class="event-details">
-                            <span><i class="fas fa-clock"></i> 8:00 AM</span>
+                            <span><i class="fas fa-clock"></i> 5:00 PM</span>
                             <span><i class="fas fa-map-marker-alt"></i> On the church premises</span>
                         </div>
                         <button class="event-expand-btn" onclick="toggleEventDetails(this)">
                             More Details <i class="fas fa-chevron-down"></i>
                         </button>
                         <div class="event-expanded-content hidden">
-                            <p>Join us for this historic moment as we celebrate the grand mass of our centennial jubilee
-                                year. With His Eminence Cardinal Malcolm Ranjith as the main celebrant, we will
-                                celebrate the 100th anniversary of our church's foundation. with joy and gratitude.</p>
+                            <p>After months of dedicated effort and renovation, St. Lazarus’ Church is delighted to announce the Grand Reopening
+                                of our beautifully renewed church. Join us for this special celebration on 02nd September 2026 at 5.00 PM, with
+                                His Lordship Rt. Rev. Dr. Anton Ranjith, Auxiliary Bishop of Colombo, as the Chief Guest, as we begin a new
+                                chapter of faith, prayer, and unity.</p>
                             <div class="event-features">
                                 <span><i class="fas fa-check"></i> All parishioners welcome</span>
-                                <span><i class="fas fa-check"></i> Live streaming available</span>
+                                <span><i class="fas fa-xmark"></i> Live streaming not available</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Event 2 - Cultural Festival -->
+                <div class="event-card" data-category="cultural">
+                    <div class="event-date">
+                        <span class="event-day">03</span>
+                        <span class="event-month">SEP</span>
+                        <span class="event-year">2026</span>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-category">
+                            <span class="category-tag cultural">Cultural Events</span>
+                        </div>
+                        <h3 class="event-title">Hoisting of the flagstaff</h3>
+                        <p class="event-description">Join us for the ceremonial hoisting of the flagstaff at our parish community according to the traditional procedure of preparation for the feast.</p>
+                        <div class="event-details">
+                            <span><i class="fas fa-clock"></i> 5:30 PM</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Front of the church</span>
+                        </div>
+                        <button class="event-expand-btn" onclick="toggleEventDetails(this)">
+                            More Details <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="event-expanded-content hidden">
+                            <p>Join us on 03rd September at 5:30 PM for the ceremonial hoisting of the flagstaff, marking the beginning of our parish community’s traditional preparation for the feast. Let us come together in faith and unity as we begin this special time of celebration and devotion.</p>
+                            <div class="event-features">
+                                <span><i class="fas fa-check"></i> All parishioners welcome</span>
+                                <span><i class="fas fa-check"></i> Blessing and prayer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 3 - Novena Masses -->
+                <div class="event-card" data-category="religious">
+                    <div class="event-date">
+                        <span class="event-day">04 - 11</span>
+                        <span class="event-month">SEP</span>
+                        <span class="event-year">2026</span>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-category">
+                            <span class="category-tag religious">Religious Services</span>
+                        </div>
+                        <h3 class="event-title">Daily Mass and Novena</h3>
+                        <p class="event-description">Join us for the daily Mass and Novena at our parish community.</p>
+                        <div class="event-details">
+                            <span><i class="fas fa-clock"></i> 7:00 PM</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Inside the church</span>
+                        </div>
+                        <button class="event-expand-btn" onclick="toggleEventDetails(this)">
+                            More Details <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="event-expanded-content hidden">
+                            <p>Join us on 04th - 11th September at 7:00 PM for the daily Mass and Novena, marking the beginning of our parish community’s traditional preparation for the feast. Let us come together in faith and unity as we begin this special time of celebration and devotion.</p>
+                            <div class="event-features">
+                                <span><i class="fas fa-check"></i> All parishioners welcome</span>
+                                <span><i class="fas fa-check"></i> Blessing with St. Lazarus' Statue</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 4 - Blessing the Sick -->
+                <div class="event-card" data-category="religious">
+                    <div class="event-date">
+                        <span class="event-day">10</span>
+                        <span class="event-month">SEP</span>
+                        <span class="event-year">2026</span>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-category">
+                            <span class="category-tag religious">Religious Services</span>
+                        </div>
+                        <h3 class="event-title">Blessing the Sick</h3>
+                        <p class="event-description">Join us for the blessing of the sick at our parish community.</p>
+                        <div class="event-details">
+                            <span><i class="fas fa-clock"></i> 9:00 AM</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Inside the church</span>
+                        </div>
+                        <button class="event-expand-btn" onclick="toggleEventDetails(this)">
+                            More Details <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="event-expanded-content hidden">
+                            <p>Join us on 10th September at 9:00 AM for the blessing of the sick at our parish community. Let us come together in faith and unity as we begin this special time of celebration and devotion.</p>
+                            <div class="event-features">
+                                <!-- <span><i class="fas fa-check"></i> All parishioners welcome</span> -->
+                                <span><i class="fas fa-check"></i> Blessing with St. Lazarus' Statue</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 5 - Day of Repentance -->
+                <div class="event-card" data-category="religious">
+                    <div class="event-date">
+                        <span class="event-day">10</span>
+                        <span class="event-month">SEP</span>
+                        <span class="event-year">2026</span>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-category">
+                            <span class="category-tag religious">Religious Services</span>
+                        </div>
+                        <h3 class="event-title">Day of Repentance</h3>
+                        <p class="event-description">Join us for the day of repentance.</p>
+                        <div class="event-details">
+                            <span><i class="fas fa-clock"></i> 7:00 PM</span>
+                            <span><i class="fas fa-map-marker-alt"></i> In church premises</span>
+                        </div>
+                        <button class="event-expand-btn" onclick="toggleEventDetails(this)">
+                            More Details <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="event-expanded-content hidden">
+                            <p>Join us on 10th September at 7:00 PM for the day of repentance. Let us come together in faith and unity as we begin this special time of celebration and devotion.</p>
+                            <div class="event-features">
+                                <span><i class="fas fa-check"></i> All parishioners welcome</span>
+                                <span><i class="fas fa-check"></i> Blessing with St. Lazarus' Statue</span>
+                                <span><i class="fas fa-check"></i> Confession hearing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -328,7 +456,7 @@
 
                 <!-- Column 1: Logo -->
                 <div class="footer-col">
-                    <img src="Assets/Essentials/CLI-logo-b.png" alt="St. Lazarus Church" class="footer-logo">
+                    <img src="Assets/Essentials/CLI-logo-c.png" alt="St. Lazarus Church" class="footer-logo">
                     <p class="arch-ds-style">Colombo Archdiocese</p>
                     <p class="footcol1-desc">A beacon of faith since 1926. Celebrating 100 years of devotion in
                         2026.
