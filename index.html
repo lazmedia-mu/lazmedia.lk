@@ -90,6 +90,9 @@
         </div>>
     </div>
 
+    <!-- Notifications Container - Only on Index.html -->
+    <div class="notifications-container" id="notifications-container"></div>
+
     <!--=================================Site Introduction===========================-->
     <section class="intro-section">
         <div class="intro-container">
@@ -247,57 +250,286 @@
 
     <section class="mass-schedule-section" id="mass-schedule">
         <div class="container">
+            <!-- Modern Search & Filter Section -->
+            <div class="mass-filter-container">
+                <div class="search-wrapper">
+                    <i class="fas fa-search search-icon"></i>
+                    <input 
+                        type="text" 
+                        id="mass-search" 
+                        placeholder="Search masses, times, locations..." 
+                        class="mass-search-input"
+                        autocomplete="off"
+                    >
+                    <button class="clear-search" id="clear-search" aria-label="Clear search">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="filter-tags">
+                    <button class="filter-tag active" data-filter="all">
+                        <i class="fas fa-th-large"></i> All
+                    </button>
+                    <button class="filter-tag" data-filter="sunday">
+                        <i class="fas fa-church"></i> Sunday Masses
+                    </button>
+                    <button class="filter-tag" data-filter="weekday">
+                        <i class="fas fa-calendar-week"></i> Weekdays
+                    </button>
+                    <button class="filter-tag" data-filter="devotions">
+                        <i class="fas fa-pray"></i> Devotions
+                    </button>
+                    <button class="filter-tag" data-filter="services">
+                        <i class="fas fa-hands-helping"></i> Services
+                    </button>
+                </div>
+                <div class="results-count" id="results-count">
+                    <i class="fas fa-list-ul"></i> Showing all <span>16</span> events
+                </div>
+            </div>
 
-            <div class="mass-grid">
-
+            <!-- Modern Mass Grid with Enhanced Cards -->
+            <div class="modern-mass-grid" id="mass-items-container">
                 <!-- Sunday Masses -->
-                <div class="mass-card">
-                    <i class="fas fa-clock clock-icon"></i>
-                    <h3>Sunday Masses</h3>
-                    <ul class="mass-times">
-                        <li><strong>Saturday 6:00 PM</strong> — Kurukulawa</li>
-                        <li><strong>Sunday 6:30 AM</strong> — Thuduwegedara</li>
-                        <li><strong>Sunday 8:15 AM</strong> — Kurukulawa</li>
-                    </ul>
+                <div class="mass-item" data-category="sunday" data-tags="saturday,sunday,evening,morning,kurukulawa,thuduwegedara">
+                    <div class="modern-mass-card">
+                        <div class="card-header">
+                            <div class="category-badge sunday">
+                                <i class="fas fa-church"></i> Sunday Masses
+                            </div>
+                            <div class="fav-btn" aria-label="Add to favorites">
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <ul class="modern-mass-list">
+                                <li class="mass-list-item">
+                                    <div class="time-badge">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Sat 6:00 PM</span>
+                                    </div>
+                                    <div class="mass-details">
+                                        <h4>Vigil Mass</h4>
+                                        <p>Kurukulawa Parish Church</p>
+                                    </div>
+                                    <div class="location-badge">
+                                        <i class="fas fa-map-marker-alt"></i> Kurukulawa
+                                    </div>
+                                </li>
+                                <li class="mass-list-item">
+                                    <div class="time-badge">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Sun 6:30 AM</span>
+                                    </div>
+                                    <div class="mass-details">
+                                        <h4>Early Mass</h4>
+                                        <p>Thuduwegedara Chapel</p>
+                                    </div>
+                                    <div class="location-badge">
+                                        <i class="fas fa-map-marker-alt"></i> Thuduwegedara
+                                    </div>
+                                </li>
+                                <li class="mass-list-item">
+                                    <div class="time-badge">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Sun 8:15 AM</span>
+                                    </div>
+                                    <div class="mass-details">
+                                        <h4>Main Mass</h4>
+                                        <p>Kurukulawa Parish Church</p>
+                                    </div>
+                                    <div class="location-badge">
+                                        <i class="fas fa-map-marker-alt"></i> Kurukulawa
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Weekday Masses -->
-                <div class="mass-card">
-                    <i class="fas fa-clock clock-icon"></i>
-                    <h3>Weekday Masses</h3>
-                    <ul class="mass-times">
-                        <li><strong>Tuesday & Friday</strong> — 7:00 AM</li>
-                        <li><strong>Thursday</strong> — 7:00 AM (Convent)</li>
-                        <li><strong>Saturday</strong> — 7:00 AM </li>
-                        <li><strong>First Saturday of the Month</strong> — 7:00 AM (Recitation of the Rosary and Adoration of the Holy Eucharist)</li>
-
-                    </ul>
+                <div class="mass-item" data-category="weekday" data-tags="tuesday,friday,thursday,saturday,morning,convent,rosary,adoration,eucharist">
+                    <div class="modern-mass-card">
+                        <div class="card-header">
+                            <div class="category-badge weekday">
+                                <i class="fas fa-calendar-week"></i> Weekday Masses
+                            </div>
+                            <div class="fav-btn" aria-label="Add to favorites">
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <ul class="modern-mass-list">
+                                <li class="mass-list-item">
+                                    <div class="time-badge">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Tue/ Fri 7:00 AM</span>
+                                    </div>
+                                    <div class="mass-details">
+                                        <h4>Regular Weekday Mass</h4>
+                                        <p>Parish Church Daily Mass</p>
+                                    </div>
+                                </li>
+                                <li class="mass-list-item">
+                                    <div class="time-badge">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Thu 7:00 AM</span>
+                                    </div>
+                                    <div class="mass-details">
+                                        <h4>Convent Mass</h4>
+                                        <p>Sisters of the Convent Chapel</p>
+                                    </div>
+                                    <div class="location-badge special">
+                                        <i class="fas fa-map-marker-alt"></i> Convent
+                                    </div>
+                                </li>
+                                <li class="mass-list-item">
+                                    <div class="time-badge">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Sat 7:00 AM</span>
+                                    </div>
+                                    <div class="mass-details">
+                                        <h4>Saturday Morning Mass</h4>
+                                        <p>Weekly Saturday Mass</p>
+                                    </div>
+                                </li>
+                                <li class="mass-list-item featured">
+                                    <div class="time-badge special">
+                                        <i class="fas fa-star"></i>
+                                        <span>1st Sat</span>
+                                    </div>
+                                    <div class="mass-details">
+                                        <h4>Special Monthly Mass</h4>
+                                        <p>Rosary & Adoration of Holy Eucharist</p>
+                                    </div>
+                                    <div class="special-badge">
+                                        <i class="fas fa-calendar-star"></i> Monthly
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Confessions -->
-                <div class="mass-card">
-                    <i class="fas fa-clock clock-icon"></i>
-                    <h3>Confessions &amp; Devotions</h3>
-                    <ul class="mass-times">
-                        <li><strong>Mass with Sadasarana Novina</strong> — Wednesday 6:00 PM</li>
-                        <li><strong>Mass with St. Lazarus Novina</strong> — Friday 6:00 PM</li>
-                        <li><strong>Anointing with holy oil and blessing</strong> — First Friday of the Month 6:00 PM</li>
-                        <li><strong>Confessions</strong> — Before Holy Mass</li>
-                    
-                    </ul>
+                <!-- Confessions & Devotions -->
+                <div class="mass-item" data-category="devotions" data-tags="wednesday,friday,novina,sadasarana,lazarus,holy,anointing,blessing,confessions,rosary,first">
+                    <div class="modern-mass-card">
+                        <div class="card-header">
+                            <div class="category-badge devotion">
+                                <i class="fas fa-pray"></i> Devotions
+                            </div>
+                            <div class="fav-btn" aria-label="Add to favorites">
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <ul class="modern-mass-list">
+                                <li class="mass-list-item">
+                                    <div class="time-badge">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Wed 6:00 PM</span>
+                                    </div>
+                                    <div class="mass-details">
+                                        <h4>Sadasarana Novena Mass</h4>
+                                        <p>Mass with Novena Prayers</p>
+                                    </div>
+                                </li>
+                                <li class="mass-list-item">
+                                    <div class="time-badge">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Fri 6:00 PM</span>
+                                    </div>
+                                    <div class="mass-details">
+                                        <h4>St. Lazarus Novena Mass</h4>
+                                        <p>Patron Saint Novena Prayers</p>
+                                    </div>
+                                </li>
+                                <li class="mass-list-item featured">
+                                    <div class="time-badge special">
+                                        <i class="fas fa-star"></i>
+                                        <span>1st Fri</span>
+                                    </div>
+                                    <div class="mass-details">
+                                        <h4>Anointing & Blessing</h4>
+                                        <p>Holy Oil Anointing & Special Blessings</p>
+                                    </div>
+                                    <div class="special-badge">
+                                        <i class="fas fa-calendar-star"></i> Monthly
+                                    </div>
+                                </li>
+                                <li class="mass-list-item">
+                                    <div class="mass-details full-width">
+                                        <h4><i class="fas fa-user-clock"></i> Confessions Available</h4>
+                                        <p>Confessions are heard before all Holy Masses</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Other Services -->
-                <div class="mass-card">
-                    <i class="fas fa-clock clock-icon"></i>
-                    <h3>Other Services</h3>
-                    <ul class="mass-times">
-                        <li><strong>Baptism, Marriages & Funerals</strong> — Consult the Parish Priests in order to an appointment</li>
-                        <li><strong>General Office Day</strong> — Wednesday 9.00 AM to 1:00 PM and 4:00 PM Onwards (Except Mondays)</li>
-                        <li><strong>For More</strong> — Contact the office</li>
-                    </ul>
+                <div class="mass-item" data-category="services" data-tags="baptism,marriage,funeral,office,wednesday,appointment,priest,contact">
+                    <div class="modern-mass-card">
+                        <div class="card-header">
+                            <div class="category-badge service">
+                                <i class="fas fa-hands-helping"></i> Services
+                            </div>
+                            <div class="fav-btn" aria-label="Add to favorites">
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <ul class="modern-mass-list">
+                                <li class="mass-list-item">
+                                    <div class="mass-details full-width">
+                                        <h4><i class="fas fa-calendar-plus"></i> Sacraments & Events</h4>
+                                        <p>Baptisms, Marriages & Funerals - Book appointment with Parish Priests</p>
+                                    </div>
+                                </li>
+                                <li class="mass-list-item">
+                                    <div class="time-badge">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Wed 9AM-1PM</span>
+                                    </div>
+                                    <div class="mass-details">
+                                        <h4>Parish Office Hours</h4>
+                                        <p>General Office Day - Except Mondays</p>
+                                    </div>
+                                    <div class="location-badge">
+                                        <i class="fas fa-map-marker-alt"></i> Office
+                                    </div>
+                                </li>
+                                <li class="mass-list-item">
+                                    <div class="time-badge">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Wed 4PM+</span>
+                                    </div>
+                                    <div class="mass-details">
+                                        <h4>Afternoon Office</h4>
+                                        <p>Evening office hours for consultations</p>
+                                    </div>
+                                </li>
+                                <li class="mass-list-item cta">
+                                    <div class="mass-details full-width">
+                                        <h4><i class="fas fa-phone-alt"></i> Need More Information?</h4>
+                                        <p>Contact the parish office for detailed inquiries</p>
+                                        <a href="contact-us.html" class="contact-btn">
+                                            <i class="fas fa-arrow-right"></i> Contact Us
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+            </div>
 
+            <!-- Empty State -->
+            <div class="no-results" id="no-results" style="display: none;">
+                <i class="fas fa-search-minus"></i>
+                <h3>No masses found</h3>
+                <p>Try adjusting your search or filter to find what you're looking for.</p>
+                <button class="reset-filters" id="reset-filters">Reset all filters</button>
             </div>
         </div>
     </section>
