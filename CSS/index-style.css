@@ -964,6 +964,104 @@
     transform: translateY(-2px);
 }
 
+/* Empty State News Card Styles */
+.empty-state {
+    background: linear-gradient(135deg, #ffffff 0%, #fafaf5 100%);
+    border: 2px dashed #d4a01740;
+    transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.empty-state:hover {
+    border-color: #d4a01780;
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(212, 160, 23, 0.15);
+}
+
+.empty-icon-wrapper,
+.icon-wrapper {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #d4a01715 0%, #d4a01730 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: all 0.4s ease;
+}
+
+.icon-wrapper {
+    background: linear-gradient(135deg, #d4a01720 0%, #991b1b20 100%);
+}
+
+.empty-icon-wrapper i,
+.icon-wrapper i {
+    font-size: 2rem;
+    color: #d4a017;
+    transition: transform 0.4s ease;
+}
+
+.empty-state:hover .empty-icon-wrapper i {
+    transform: scale(1.1);
+}
+
+.empty-badge {
+    display: inline-block;
+    background: #f1f5f9;
+    color: #64748b;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+}
+
+.empty-badge.primary {
+    background: #d4a01715;
+    color: #8b6914;
+}
+
+.primary-btn {
+    background: #d4a017;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #991b1b;
+    color: white;
+}
+
+.empty-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #1e2937;
+}
+
+.empty-content p {
+    max-width: 85%;
+    margin: 0 auto 25px;
+    color: #64748b;
+    line-height: 1.7;
+}
+
+/* Entrance animations for empty state cards */
+.empty-state {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.empty-state.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.empty-state:nth-child(1) { transition-delay: 0.1s; }
+.empty-state:nth-child(2) { transition-delay: 0.2s; }
+.news-card:last-child { transition-delay: 0.3s; }
+
 /* Responsive for news section */
 @media (max-width: 768px) {
     .news-card {
@@ -976,6 +1074,21 @@
     
     .news-content {
         padding: 20px;
+    }
+    
+    .empty-icon-wrapper,
+    .icon-wrapper {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .empty-icon-wrapper i,
+    .icon-wrapper i {
+        font-size: 1.75rem;
+    }
+    
+    .empty-content p {
+        max-width: 100%;
     }
     
     .section-title {

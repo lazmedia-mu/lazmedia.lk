@@ -47,8 +47,30 @@ function animateCounters() {
     });
 }
 
+// News card scroll animations - Animate in when visible
+function animateNewsCards() {
+    const newsCards = document.querySelectorAll('.news-card');
+    
+    const newsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                newsObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.2,
+        rootMargin: '0px 0px -50px 0px'
+    });
+    
+    newsCards.forEach(card => {
+        newsObserver.observe(card);
+    });
+}
+
 // Run animations when DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     animateIntroCard();
     animateCounters();
+    animateNewsCards();
 });

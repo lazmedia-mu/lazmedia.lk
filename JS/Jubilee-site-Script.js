@@ -51,31 +51,99 @@ document.addEventListener('keydown', function (event) {
 });
 
 
+// Add subtle parallax effect to hero section
+document.addEventListener('DOMContentLoaded', function() {
+    const hero = document.querySelector('.jubilee-hero');
+    const eventInfo = document.querySelector('.event-info');
+    const floatingLogo = document.querySelector('.floating-logo');
+    
+    if (hero && eventInfo && floatingLogo) {
+        hero.addEventListener('mousemove', function(e) {
+            const rect = hero.getBoundingClientRect();
+            const x = (e.clientX - rect.left) / rect.width - 0.5;
+            const y = (e.clientY - rect.top) / rect.height - 0.5;
+            
+            // Subtle parallax movement - different speeds for different elements
+            eventInfo.style.transform = `translate(${x * 15}px, ${y * 15}px)`;
+            floatingLogo.style.transform = `translate(${x * -20}px, ${y * -20}px)`;
+        });
+        
+        // Reset position when mouse leaves
+        hero.addEventListener('mouseleave', function() {
+            eventInfo.style.transform = 'translate(0, 0)';
+            floatingLogo.style.transform = 'translate(0, 0)';
+        });
+    }
+});
+
 // =======================Event Scripting=======================
 function filterEvents(category, element) {
+    // Safety check - if element is null/undefined, exit to prevent errors
+    if (!element) return;
+    
     // Update active tab styling
-    document.querySelectorAll('.tab-btn').forEach(btn => {
+    const allTabs = document.querySelectorAll('.tab-btn');
+    allTabs.forEach(btn => {
         btn.classList.remove('active');
     });
     element.classList.add('active');
 
-    // Filter events
+    // Filter events with improved transitions to maintain vertical waterfall flow
+    const eventsContainer = document.getElementById('eventsTimeline');
     const events = document.querySelectorAll('.event-card');
+    let visibleCount = 0;
+    
+    // First collect all matching events to maintain proper order
+    const matchingEvents = [];
+    const nonMatchingEvents = [];
+    
     events.forEach(event => {
         if (category === 'all' || event.dataset.category === category) {
-            event.style.display = 'flex';
-            setTimeout(() => {
-                event.style.opacity = '1';
-                event.style.transform = 'translateX(0)';
-            }, 50);
+            matchingEvents.push(event);
         } else {
-            event.style.opacity = '0';
-            event.style.transform = 'translateX(20px)';
-            setTimeout(() => {
-                event.style.display = 'none';
-            }, 300);
+            nonMatchingEvents.push(event);
         }
     });
+    
+    // Hide non-matching events first
+    nonMatchingEvents.forEach(event => {
+        event.style.opacity = '0';
+        event.style.transform = 'translateY(-20px)';
+        setTimeout(() => {
+            event.style.display = 'none';
+        }, 250);
+    });
+    
+    // Show matching events in their original vertical order with staggered animations
+     matchingEvents.forEach((event, index) => {
+         // Reappend to maintain DOM order (ensures vertical stacking)
+         eventsContainer.appendChild(event);
+         
+         // Show with staggered delay
+         const delay = index * 80;
+         event.style.display = 'flex';
+         setTimeout(() => {
+             event.style.opacity = '1';
+             event.style.transform = 'translateY(0)';
+         }, delay + 50);
+     });
+     
+     // Show empty state if no events match (for future-proofing)
+      const emptyState = document.querySelector('.no-events-message');
+      if (matchingEvents.length === 0 && !emptyState) {
+        const noEvents = document.createElement('div');
+        noEvents.className = 'no-events-message';
+        noEvents.innerHTML = `
+            <div style="text-align: center; padding: 60px 20px; width: 100%;">
+                <i class="fas fa-calendar-times" style="font-size: 3rem; color: #d4a017; margin-bottom: 20px;"></i>
+                <h3>No events in this category</h3>
+                <p>Check back soon for upcoming ${category} events.</p>
+            </div>
+        `;
+        eventsContainer.appendChild(noEvents);
+    } else if (visibleCount > 0 && emptyState) {
+        emptyState.remove();
+    }
 }
 
 function toggleEventDetails(element) {

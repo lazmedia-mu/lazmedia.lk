@@ -1,14 +1,14 @@
 // Fundraising Progress Calculator
 // Simply update these two values, and everything else auto-calculates
-const FUNDRAISING_GOAL = 35000000;  // Total goal in LKR - UPDATE THIS
-const AMOUNT_RAISED = 16000000;      // Amount raised so far in LKR - UPDATE THIS
+const FUNDRAISING_GOAL = 1000000;  // Total goal in LKR - UPDATE THIS
+const AMOUNT_RAISED = 1000000;      // Amount raised so far in LKR - UPDATE THIS
 
 // Expenses Allocation - Update these to match your actual budget
 // Format: { title: 'Project Name', amount: Allocation in LKR, description: 'Details about this expense' }
 const EXPENSES = [
     {
         title: 'Church Structure Renovation',
-        amount: 13000000,
+        amount: 900000,
         description: 'Structural repairs and waterproofing of the main sanctuary structure'
     }
 ];
