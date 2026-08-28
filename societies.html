@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Catholic parish located in Kurukulawa, Ragama, Sri Lanka, under the Archdiocese of Colombo. Dedicated to St. Lazarus.">
+    <title>St. Lazarus' Church - Kurukulawa</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Lora:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/457055c70a9c98aa64002f05d6652edc?family=ITC+Eras+Demi" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/essential-style.css">
+    <link rel="stylesheet" href="CSS/index-style.css">
+    <link rel="stylesheet" href="CSS/our-societies-style.css">
+    <link rel="icon" type="image/png" href="Assets/Essentials/Jubilee-logo.png">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div class="heads-up">
+        <div class="div1">
+            <img src="Assets/Essentials/CLI-logo-c.png" alt="St. Lazarus Church" class="title-logo">
+        </div>
+        <div class="div2">
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav" id="desktop-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">About <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="history.html">Our Stories</a></li>
+                            <li><a href="priests.html">Our Priests</a></li>
+                            <li><a href="under-construction.html">Religious Institutions</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Community <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="societies.html">Our Societies</a></li>
+                            <li><a href="news.html">Church News</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="jubilee-site.html">Jubilee Site</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
+                    <li><a href="donation.html" class="donate-btn">Donate</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="div3">
+            <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+        <div class="div4"></div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="menu-header">
+            <img src="Assets/Essentials/CLI-logo-c.png" alt="St. Lazarus Church" class="menu-logo">
+            <button class="close-btn" id="close-btn">X</button>
+        </div>
+
+        <nav class="menu-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jubilee-site.html">Jubilee Site</a></li>
+                <li><a href="history.html">Our Stories</a></li>
+                <li><a href="priests.html">Our Priests</a></li>
+                <li><a href="societies.html">Our Societies</a></li>
+                <li><a href="gallery.html">Church Gallery</a></li>
+                <li><a href="news.html">Church News</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="under-construction.html">Religious Institutions</a></li>
+            </ul>
+        </nav>
+
+        <div class="menu-footer">
+            <a href="donation.html" class="menu-donate-btn">Donations</a>
+        </div>>
+    </div>    <!-- MAIN SOCIETIES SECTION -->
+    <main class="societies-main">
+        <section class="church-societies" id="societies-began">
+            <div class="container">
+                <span class="since-when">Since 1926</span>
+                <h2 class="section-title">OUR SOCIETIES</h2>
+                <p class="section-subtitle">Discover the vibrant communities and ministries that bring our parish family together. Join us in faith, service, and fellowship.</p>
+            </div>
+        </section>
+
+        <section class="societies-section">
+            <div class="container">
+                <!-- Filter System -->
+                <div class="filter-container">
+                    <div class="filter-header">
+                        <h2>Browse Societies</h2>
+                        <p>Filter by category to find communities that resonate with you</p>
+                    </div>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">
+                            <i class="fas fa-th-large"></i>
+                            All Societies
+                        </button>
+                        <button class="filter-btn" data-filter="liturgical">
+                            <i class="fas fa-pray"></i>
+                            Liturgical
+                        </button>
+                        <button class="filter-btn" data-filter="charity">
+                            <i class="fas fa-hands-helping"></i>
+                            Charity & Outreach
+                        </button>
+                        <button class="filter-btn" data-filter="youth">
+                            <i class="fas fa-users"></i>
+                            Youth
+                        </button>
+                        <button class="filter-btn" data-filter="music">
+                            <i class="fas fa-music"></i>
+                            Music & Arts
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Societies Grid -->
+                <div class="societies-grid" id="societiesGrid">
+                    <!-- Society Card 1 - Legion of Mary -->
+                    <div class="society-card" data-category="liturgical">
+                        <div class="card-header">
+                            <div class="society-logo">
+                                <img src="https://static.wixstatic.com/media/7760be_023774f29f7645fba6246241dd3b6587~mv2.jpg/v1/fill/w_280,h_500,al_c,lg_1,q_80,enc_avif,quality_auto/7760be_023774f29f7645fba6246241dd3b6587~mv2.jpg" alt="Legion of Mary" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="fallback-icon">
+                                    <i class="fas fa-question"></i>
+                                </div>
+                            </div>
+                            <div class="card-meta">
+                                <span class="category-badge liturgical">Liturgical</span>
+                                <h3 class="society-name">Legion of Mary</h3>
+                            </div>
+                        </div>
+                        <div class="separator"></div>
+                        <p class="society-description">
+                            A lay Catholic association dedicated to spiritual growth through prayer and apostolic work. Members gather weekly to pray the rosary and undertake parish outreach activities.
+                        </p>
+                    </div>
+
+                    <!-- Society Card 2 - St. Vincent de Paul Society -->
+                    <div class="society-card" data-category="charity">
+                        <div class="card-header">
+                            <div class="society-logo">
+                                <img src="https://wptest.hipinfo.ca/wp-content/uploads/2024/04/society-saint-vincent.webp" alt="Society of St. Vincent de Paul" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="fallback-icon">
+                                    <i class="fas fa-question"></i>
+                                </div>
+                            </div>
+                            <div class="card-meta">
+                                <span class="category-badge charity">Charity</span>
+                                <h3 class="society-name">Society of St. Vincent de Paul</h3>
+                            </div>
+                        </div>
+                        <div class="separator"></div>
+                        <p class="society-description">
+                            A voluntary organization committed to combating poverty and supporting those in need within our parish community through home visits and material assistance.
+                        </p>
+                    </div>
+
+                    <!-- Society Card 3 - Catholic Youth Movement -->
+                    <div class="society-card" data-category="youth">
+                        <div class="card-header">
+                            <div class="society-logo">
+                                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSKskJ7UZAO5d2siV7db4RKB8A3ayGofHgYzhZvh7tjX3yiDpbz" alt="Catholic Youth Movement" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="fallback-icon">
+                                    <i class="fas fa-question"></i>
+                                </div>
+                            </div>
+                            <div class="card-meta">
+                                <span class="category-badge youth">Youth</span>
+                                <h3 class="society-name">Young Catholic Students (YCS)</h3>
+                            </div>
+                        </div>
+                        <div class="separator"></div>
+                        <p class="society-description">
+                            Empowering young people to live their faith boldly through fellowship, faith formation, and community service. Open to all youth aged 16-35 in the parish.
+                        </p>
+                    </div>
+
+                    <!-- Society Card 4 - Parish Choir -->
+                    <div class="society-card" data-category="music">
+                        <div class="card-header">
+                            <div class="society-logo">
+                                <img src="Assets/Societies/choir.png" alt="Parish Choir" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="fallback-icon">
+                                    <i class="fas fa-question"></i>
+                                </div>
+                            </div>
+                            <div class="card-meta">
+                                <span class="category-badge music">Music</span>
+                                <h3 class="society-name">St. Lazarus Parish Choir</h3>
+                            </div>
+                        </div>
+                        <div class="separator"></div>
+                        <p class="society-description">
+                            The voice of our parish community! We enhance the liturgical experience through sacred music, hymns, and chant at all major masses and liturgical celebrations.
+                        </p>
+                    </div>
+
+                    <!-- Society Card 5 - Alter Servers Association -->
+                    <div class="society-card" data-category="liturgical">
+                        <div class="card-header">
+                            <div class="society-logo">
+                                <img src="Assets/Societies/altar-servers.png" alt="Altar Servers" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="fallback-icon">
+                                    <i class="fas fa-question"></i>
+                                </div>
+                            </div>
+                            <div class="card-meta">
+                                <span class="category-badge liturgical">Liturgical</span>
+                                <h3 class="society-name">Altar Servers Guild</h3>
+                            </div>
+                        </div>
+                        <div class="separator"></div>
+                        <p class="society-description">
+                            Young parishioners who assist priests during the Holy Mass and other liturgical services. They receive training in liturgical practices and spiritual formation.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Empty State (hidden by default) -->
+                <div class="empty-state" id="emptyState" style="display: none;">
+                    <i class="fas fa-search"></i>
+                    <h3>No societies found</h3>
+                    <p>Try selecting a different category to explore our parish societies.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-card">
+                    <h2>Is your society isn't here?</h2>
+                    <p>Oh, we're sorry! We can add it. Send us your society details and we'll feature it on our page.</p>
+                    <a href="contact-us.html" class="cta-button">
+                        <i class="fas fa-envelope"></i>
+                        Send Your Society Details
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========================================================================= Footer ========================================================================= -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <!-- Column 1: Logo -->
+                <div class="footer-col">
+                    <img src="Assets/Essentials/CLI-logo-c.png" alt="St. Lazarus Church" class="footer-logo">
+                 
+   <p class="arch-ds-style">Colombo Archdiocese</p>
+                    <p class="footcol1-desc">A beacon of faith since 1926. Celebrating 100 years of devotion in
+                        2026.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home-sweet-home">Home</a></li>
+                        <li><a href="about.html">About Our Parish</a></li>
+                        <li><a href="#mass-schedule">Mass Schedule</a></li>
+                        <li><a href="#what's-on">Ongoing Events</a></li>
+                        <li><a href="news.html">News Feed</a></li>
+                        <li><a href="#church-archive-s">Church Archives</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact Info -->
+                <div class="footer-col">
+                    <h4>Contacts</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>St. Lazarus Church,<br>Kurukulawa, Ragama,<br>11101,<br> Sri Lanka</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <p>+94 112 958 637</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>sanlasarusch1926@gmail.com</p>
+                    </div>
+                </div>
+
+                <!-- Column 4: Social Media -->
+                <div class="footer-col">
+                    <h4>Follow us On</h4>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/share/1Ct8vRTfdm/" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/lazmedia_1926?igsh=aGY2OTF1b3FpdWQ2" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@slc-x3f?si=l3OjjDi_9ATM761b" target="_blank"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="https://whatsapp.com/channel/0029Valq95l0LKZMp50Chm3d" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Rule of Copyright -->
+        <div class="footer-bottom">
+            <p>© 2026 St. Lazarus' Church Media, Kurukulawa. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="JS/essential-script.js"></script>
+    <script src="JS/index-script.js"></script>
+    <script src="JS/our-societies-script.js"></script>
+</body>
+
+</html>
