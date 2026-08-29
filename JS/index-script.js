@@ -75,7 +75,7 @@ function createNotifications() {
   
   const notifications = [
     { message: "This site is a project by Lazmedia. and still in development." },
-    { message: "Developed and Maintained by Alpha Studios UK pvt Ltd." } //let users know about the developer.
+    { message: "Some functionsmay not work properly" } //let users know about the developer.
   ];
 
   notifications.forEach((notification, index) => {
