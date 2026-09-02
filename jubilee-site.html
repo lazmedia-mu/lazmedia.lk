@@ -165,19 +165,136 @@
                     faith and community.</p>
             </div>
 
-            <!-- Audio Player -->
-            <div class="audio-player-wrapper">
+            <!-- Video Player Section - YouTube -->
+            <div class="video-player-wrapper">
+                <div class="video-player">
+                    <h3 class="player-title">Jubilee Hymn Video</h3>
+                    <div class="youtube-container">
+                        <iframe 
+                            id="youtubePlayer"
+                            width="100%" 
+                            height="400" 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            title="Jubilee Hymn Video" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom Advanced Audio Player -->
+            <div class="custom-audio-wrapper">
                 <div class="audio-player">
-                    <audio id="jubileeAudio" controls preload="metadata">
-                        <source src="Assets/Jubilee-Hymn-Test-Version.mp3" type="audio/mp3">
+                    <h3 class="player-title">Listen to Jubilee Hymn</h3>
+                    
+                    <!-- Hidden audio element -->
+                    <audio id="jubileeAudio" preload="metadata">
+                        <source src="https://pub-6e978b6b70bd447e9ca1d7073298e7c4.r2.dev/St-Lazarus-Jubilee-Hymn.mp3" type="audio/mpeg">
+                        <source src="https://pub-6e978b6b70bd447e9ca1d7073298e7c4.r2.dev/St-Lazarus-Jubilee-Hymn.m4a" type="audio/mp4">
+                        <source src="https://pub-6e978b6b70bd447e9ca1d7073298e7c4.r2.dev/St-Lazarus-Jubilee-Hymn.wav" type="audio/wav">
                         Your browser does not support the audio element.
                     </audio>
-                    <div class="player-controls">
-                        <a href="Assets/Jubilee Site/Jubilee-Hymn-Test-Version.mp3"
-                            download="St-Lazarus-Jubilee-Hymn.mp3" class="btn btn-download"
-                            rel="noopener noreferrer">
-                            <i class="fas fa-download"></i> Download Hymn
-                        </a>
+
+                    <!-- Custom Player UI -->
+                    <div class="custom-player">
+                        <!-- Album Art / Visualizer -->
+                        <div class="player-visual">
+                            <div class="album-art">
+                                <i class="fas fa-music"></i>
+                            </div>
+                            <div class="track-info">
+                                <h4>St. Lazarus' Centennial Jubilee Hymn</h4>
+                                <p>St. Lazarus' Choir</p>
+                            </div>
+                        </div>
+
+                        <!-- Progress Bar -->
+                        <div class="progress-container">
+                            <span class="time current-time">0:00</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progressFill"></div>
+                                <input type="range" class="progress-slider" id="progressSlider" min="0" max="100" value="0">
+                            </div>
+                            <span class="time duration">0:00</span>
+                        </div>
+
+                        <!-- Main Controls -->
+                        <div class="controls-row">
+                            <div class="left-controls">
+                                <!-- Playback Speed -->
+                                <div class="speed-control">
+                                    <button class="speed-btn" id="speedBtn">1x</button>
+                                    <div class="speed-menu" id="speedMenu">
+                                        <button class="speed-option" data-speed="0.5">0.5x</button>
+                                        <button class="speed-option" data-speed="0.75">0.75x</button>
+                                        <button class="speed-option active" data-speed="1">1x</button>
+                                        <button class="speed-option" data-speed="1.25">1.25x</button>
+                                        <button class="speed-option" data-speed="1.5">1.5x</button>
+                                        <button class="speed-option" data-speed="2">2x</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="center-controls">
+                                <button class="control-btn" id="rewindBtn" title="Rewind 10s">
+                                    <i class="fas fa-backward"></i>
+                                </button>
+                                <button class="play-pause-btn" id="playPauseBtn">
+                                    <i class="fas fa-play" id="playIcon"></i>
+                                </button>
+                                <button class="control-btn" id="forwardBtn" title="Forward 10s">
+                                    <i class="fas fa-forward"></i>
+                                </button>
+                            </div>
+
+                            <div class="right-controls">
+                                <!-- Volume Control -->
+                                <div class="volume-control">
+                                    <button class="volume-btn" id="volumeBtn">
+                                        <i class="fas fa-volume-up" id="volumeIcon"></i>
+                                    </button>
+                                    <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="100">
+                                </div>
+                                
+                                <!-- Share Button -->
+                                <button class="action-btn" id="shareBtn" title="Share">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                                
+                                <!-- Download Button -->
+                                <a href="https://pub-6e978b6b70bd447e9ca1d7073298e7c4.r2.dev/St-Lazarus-Jubilee-Hymn.mp3" 
+                                   download="St-Lazarus-Jubilee-Hymn.mp3" 
+                                   class="action-btn download-btn" 
+                                   title="Download"
+                                   rel="noopener noreferrer">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Share Modal -->
+                        <div class="share-modal" id="shareModal">
+                            <div class="share-content">
+                                <h4>Share this hymn</h4>
+                                <div class="share-links">
+                                    <a href="#" class="share-link facebook" onclick="shareOnFacebook()">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="share-link whatsapp" onclick="shareOnWhatsApp()">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                    <a href="#" class="share-link twitter" onclick="shareOnTwitter()">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="share-link copy" onclick="copyLink()">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                                <button class="close-share" id="closeShare">&times;</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -210,81 +327,7 @@
     </section>
 
     <!--=============================Jubilee Messages Section=============================-->
-    <section class="jubilee-messages">
-        <div class="messages-container">
-            <div class="section-header">
-                <p class="section-subtitle">Centennial Greetings</p>
-                <h2 class="section-title">Jubilee Messages</h2>
-                <p class="section-desc">Words of blessing and celebration from our church leadership for this historic
-                    centennial.</p>
-            </div>
 
-            <div class="messages-grid">
-                <!-- Archbishop's Message -->
-                <div class="message-card">
-                    <div class="message-header">
-                        <div class="author-avatar">
-                            <i class="fas fa-cross"></i>
-                        </div>
-                        <div class="author-info">
-                            <h3>Archbishop of Colombo</h3>
-                            <p class="author-title">His Eminence, Cardinal Malcolm Ranjith</p>
-                        </div>
-                    </div>
-                    <!-- A4 Letterhead Image - Click to view fullscreen -->
-                    <div class="letterhead-placeholder"
-                        onclick="openLightbox('Assets/Jubilee Site/archbishop-letterhead-placeholder.jpg', 'Archbishop\'s official jubilee message')">
-                        <img src="Assets/Jubilee Site/archbishop-letterhead-placeholder.jpg"
-                            alt="Archbishop's official letter with letterhead" class="letterhead-image clickable-image"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="placeholder-fallback">
-                            <i class="fas fa-file-image"></i>
-                            <span>Click to add Archbishop's letterhead image (A4 size)</span>
-                            <span class="click-hint"><i class="fas fa-search-plus"></i> Click to view fullscreen</span>
-                        </div>
-                    </div>
-                    <div class="image-caption">
-                        <p class="signature-name"
-                            style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.2rem; color: #a77f1e;">
-                            Cardinal Malcolm Ranjith</p>
-                        <p class="signature-title">Archbishop of Colombo</p>
-                    </div>
-                </div>
-
-                <!-- Parish Priest's Message -->
-                <div class="message-card">
-                    <div class="message-header">
-                        <div class="author-avatar">
-                            <i class="fas fa-user-priest"></i>
-                        </div>
-                        <div class="author-info">
-                            <h3>Parish Priest</h3>
-                            <p class="author-title">Rev. Fr. Sisira Priyashantha</p>
-                        </div>
-                    </div>
-                    <!-- A4 Letterhead Image - Click to view fullscreen -->
-                    <div class="letterhead-placeholder"
-                        onclick="openLightbox('Assets/Jubilee Site/parish-priest-letterhead-placeholder.jpg', 'Parish Priest\'s official jubilee message')">
-                        <img src="Assets/Jubilee Site/parish-priest-letterhead-placeholder.jpg"
-                            alt="Parish Priest's official letter with letterhead"
-                            class="letterhead-image clickable-image"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="placeholder-fallback">
-                            <i class="fas fa-file-image"></i>
-                            <span>Click to add Parish Priest's letterhead image (A4 size)</span>
-                            <span class="click-hint"><i class="fas fa-search-plus"></i> Click to view fullscreen</span>
-                        </div>
-                    </div>
-                    <div class="image-caption">
-                        <p class="signature-name"
-                            style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.2rem; color: #a77f1e;">
-                            Rev. Fr. Sisira Priyashantha</p>
-                        <p class="signature-title">Parish Priest, St. Lazarus' Church</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Lightbox for fullscreen image viewing -->
     <div id="imageLightbox" class="lightbox" onclick="closeLightbox()">
