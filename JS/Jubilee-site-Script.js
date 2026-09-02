@@ -146,6 +146,227 @@ function filterEvents(category, element) {
     }
 }
 
+// =======================Custom Audio Player Script=======================
+document.addEventListener('DOMContentLoaded', function() {
+    // Audio elements
+    const audio = document.getElementById('jubileeAudio');
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    const playIcon = document.getElementById('playIcon');
+    const progressFill = document.getElementById('progressFill');
+    const progressSlider = document.getElementById('progressSlider');
+    const currentTimeEl = document.querySelector('.current-time');
+    const durationEl = document.querySelector('.duration');
+    const volumeSlider = document.getElementById('volumeSlider');
+    const volumeBtn = document.getElementById('volumeBtn');
+    const volumeIcon = document.getElementById('volumeIcon');
+    const speedBtn = document.getElementById('speedBtn');
+    const speedMenu = document.getElementById('speedMenu');
+    const speedOptions = document.querySelectorAll('.speed-option');
+    const rewindBtn = document.getElementById('rewindBtn');
+    const forwardBtn = document.getElementById('forwardBtn');
+    const shareBtn = document.getElementById('shareBtn');
+    const shareModal = document.getElementById('shareModal');
+    const closeShare = document.getElementById('closeShare');
+
+    // Play/Pause functionality
+    if (playPauseBtn && audio) {
+        playPauseBtn.addEventListener('click', function() {
+            if (audio.paused) {
+                audio.play();
+                playIcon.classList.remove('fa-play');
+                playIcon.classList.add('fa-pause');
+            } else {
+                audio.pause();
+                playIcon.classList.remove('fa-pause');
+                playIcon.classList.add('fa-play');
+            }
+        });
+    }
+
+    // Update progress bar
+    if (audio && progressFill && progressSlider && currentTimeEl) {
+        audio.addEventListener('timeupdate', function() {
+            const current = audio.currentTime;
+            const duration = audio.duration;
+            if (!isNaN(duration)) {
+                const percent = (current / duration) * 100;
+                progressFill.style.width = percent + '%';
+                progressSlider.value = percent;
+                currentTimeEl.textContent = formatTime(current);
+            }
+        });
+
+        // Set duration when metadata is loaded
+        audio.addEventListener('loadedmetadata', function() {
+            if (durationEl) {
+                durationEl.textContent = formatTime(audio.duration);
+            }
+        });
+
+        // Seek functionality
+        if (progressSlider) {
+            progressSlider.addEventListener('input', function() {
+                const percent = this.value;
+                const time = (percent / 100) * audio.duration;
+                audio.currentTime = time;
+                progressFill.style.width = percent + '%';
+            });
+        }
+    }
+
+    // Rewind 10 seconds
+    if (rewindBtn && audio) {
+        rewindBtn.addEventListener('click', function() {
+            audio.currentTime = Math.max(0, audio.currentTime - 10);
+        });
+    }
+
+    // Forward 10 seconds
+    if (forwardBtn && audio) {
+        forwardBtn.addEventListener('click', function() {
+            audio.currentTime = Math.min(audio.duration, audio.currentTime + 10);
+        });
+    }
+
+    // Volume control
+    if (volumeSlider && audio) {
+        volumeSlider.addEventListener('input', function() {
+            const volume = this.value / 100;
+            audio.volume = volume;
+            
+            // Update volume icon
+            if (volumeIcon) {
+                if (volume === 0) {
+                    volumeIcon.classList.remove('fa-volume-up', 'fa-volume-down');
+                    volumeIcon.classList.add('fa-volume-mute');
+                } else if (volume < 0.5) {
+                    volumeIcon.classList.remove('fa-volume-up', 'fa-volume-mute');
+                    volumeIcon.classList.add('fa-volume-down');
+                } else {
+                    volumeIcon.classList.remove('fa-volume-down', 'fa-volume-mute');
+                    volumeIcon.classList.add('fa-volume-up');
+                }
+            }
+        });
+    }
+
+    // Mute/unmute on volume button click
+    if (volumeBtn && audio && volumeSlider) {
+        let previousVolume = 100;
+        volumeBtn.addEventListener('click', function() {
+            if (audio.volume > 0) {
+                previousVolume = volumeSlider.value;
+                audio.volume = 0;
+                volumeSlider.value = 0;
+                volumeIcon.classList.remove('fa-volume-up');
+                volumeIcon.classList.add('fa-volume-mute');
+            } else {
+                audio.volume = previousVolume / 100;
+                volumeSlider.value = previousVolume;
+                volumeIcon.classList.remove('fa-volume-mute');
+                volumeIcon.classList.add('fa-volume-up');
+            }
+        });
+    }
+
+    // Playback speed control
+    if (speedBtn && speedMenu) {
+        speedBtn.addEventListener('click', function() {
+            speedMenu.classList.toggle('open');
+        });
+
+        // Close speed menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!speedBtn.contains(e.target) && !speedMenu.contains(e.target)) {
+                speedMenu.classList.remove('open');
+            }
+        });
+    }
+
+    // Speed options
+    if (speedOptions && audio) {
+        speedOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                const speed = parseFloat(this.dataset.speed);
+                audio.playbackRate = speed;
+                speedBtn.textContent = speed + 'x';
+                
+                // Update active state
+                speedOptions.forEach(opt => opt.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Close menu
+                speedMenu.classList.remove('open');
+            });
+        });
+    }
+
+    // Share functionality
+    if (shareBtn && shareModal) {
+        shareBtn.addEventListener('click', function() {
+            shareModal.classList.add('open');
+        });
+    }
+
+    if (closeShare && shareModal) {
+        closeShare.addEventListener('click', function() {
+            shareModal.classList.remove('open');
+        });
+
+        // Close share modal when clicking outside
+        shareModal.addEventListener('click', function(e) {
+            if (e.target === shareModal) {
+                shareModal.classList.remove('open');
+            }
+        });
+    }
+
+    // Format time helper function
+    function formatTime(seconds) {
+        const mins = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return mins + ':' + (secs < 10 ? '0' : '') + secs;
+    }
+
+    // Reset play icon when audio ends
+    if (audio && playIcon) {
+        audio.addEventListener('ended', function() {
+            playIcon.classList.remove('fa-pause');
+            playIcon.classList.add('fa-play');
+            progressFill.style.width = '0%';
+            progressSlider.value = 0;
+        });
+    }
+});
+
+// Share functions
+function shareOnFacebook() {
+    const url = encodeURIComponent(window.location.href);
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+    return false;
+}
+
+function shareOnWhatsApp() {
+    const url = encodeURIComponent(window.location.href);
+    const text = encodeURIComponent("Listen to the beautiful Centennial Jubilee Hymn from St. Lazarus' Church!");
+    window.open(`https://wa.me/?text=${text}%20${url}`, '_blank');
+    return false;
+}
+
+function shareOnTwitter() {
+    const url = encodeURIComponent(window.location.href);
+    const text = encodeURIComponent("Check out the Centennial Jubilee Hymn from St. Lazarus' Church!");
+    window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+    return false;
+}
+
+function copyLink() {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+        alert('Link copied to clipboard!');
+    });
+    return false;
+}
+
 function toggleEventDetails(element) {
     const expandedContent = element.nextElementSibling;
     const icon = element.querySelector('i');
