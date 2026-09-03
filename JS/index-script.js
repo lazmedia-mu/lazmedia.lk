@@ -75,7 +75,7 @@ function createNotifications() {
   
   const notifications = [
     { message: "This site is a project by Lazmedia. and still in development." },
-    { message: "Some functions may not work properly. We're trying our best to make it work." } //let users know about the developer.
+    { message: "Some features may not work as expected. Our team is working on fixing them." } //let users know about the developer.
   ];
 
   notifications.forEach((notification, index) => {
