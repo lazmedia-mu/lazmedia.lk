@@ -185,263 +185,167 @@
     margin-bottom: 60px;
 }
 
-.main-church-title {
-    font-size: 1.8rem;
-    font-weight: 700;
+.section-subtitle {
     color: #c9a44b;
-    letter-spacing: 2px;
-    margin-bottom: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
     text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 1rem;
 }
-
-
 
 .section-title {
     font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
     font-size: 48px;
     font-weight: 700;
     color: #1e2937;
-    margin-bottom: 12px;
+    margin-bottom: 0;
     margin-top: 0;
-    text-shadow: 0px 4px 15px #c9a44b;
+    text-shadow: 0px 4px 15px rgba(201, 164, 75, 0.3);
 }
 
-.section-desc {
-    font-size: 15px;
-    color: #64748b;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Main Content Card - Clean layout: left=image+desc, right=2x2 features */
-.main-content-card {
-    background: white;
-    border-radius: 24px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-    overflow: hidden;
+/* Main About Content - Two Column Layout */
+.about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0;
-    margin-bottom: 80px;
-    opacity: 0;
-    transform: translateY(60px);
-    transition: all 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+    gap: 60px;
+    align-items: center;
+    background: white;
+    border-radius: 24px;
+    padding: 50px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
-.main-content-card.visible {
-    opacity: 1;
-    transform: translateY(0);
+/* Image Column */
+.about-image-column {
+    position: relative;
 }
 
-/* Left Column: Featured image card + description card stacked vertically */
-.about-left-column {
+.image-container {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.church-photo {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.image-container:hover .church-photo {
+    transform: scale(1.05);
+}
+
+.image-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: #c9a44b;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 8px 20px rgba(201, 164, 75, 0.4);
+}
+
+/* Text Column */
+.about-text-column {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    overflow: hidden;
     gap: 20px;
-    padding: 20px;
-    background: #f8f5ee;
 }
 
-.about-image {
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    opacity: 0;
-    transform: translateX(-30px);
-    transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+.about-text-column h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #1e2937;
+    margin-bottom: 10px;
+    line-height: 1.3;
 }
 
-.about-image:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 35px rgba(185, 28, 28, 0.12);
-}
-
-.about-image img {
-    width: 100%;
-    height: 270px;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-}
-
-.main-content-card.visible .about-image {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.about-text {
-    background: white;
-    padding: 35px 25px;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
-    display: flex;
-    align-items: center;
-    height: 270px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    opacity: 0;
-    transform: translateX(-30px);
-    transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) 0.2s;
-}
-
-.about-text:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 35px rgba(185, 28, 28, 0.12);
-}
-
-.main-content-card.visible .about-text {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.about-text p {
-    font-size: 1.05rem;
-    line-height: 1.75;
+.about-text-column p {
     color: #475569;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    font-family: 'Lora', serif;
     margin: 0;
 }
 
 
 
-/* Right Column: 2x2 Grid of Feature Cards */
-.about-features-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 20px;
-    padding: 20px;
-    background: #f8f5ee;
-}
-
-/* Staggered animations for feature cards */
-.about-features-grid .feature-card:nth-child(1) {
-    opacity: 0;
-    transform: translateX(30px);
-    transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) 0.3s;
-}
-
-.about-features-grid .feature-card:nth-child(2) {
-    opacity: 0;
-    transform: translateX(30px);
-    transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) 0.4s;
-}
-
-.about-features-grid .feature-card:nth-child(3) {
-    opacity: 0;
-    transform: translateX(30px);
-    transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) 0.5s;
-}
-
-.about-features-grid .feature-card:nth-child(4) {
-    opacity: 0;
-    transform: translateX(30px);
-    transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) 0.6s;
-}
-
-.main-content-card.visible .about-features-grid .feature-card {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-/* Features Grid - original kept for other sections if needed */
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 24px;
-}
-
-.feature-card {
-    background: white;
-    padding: 35px 25px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.feature-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 35px rgba(185, 28, 28, 0.12);
-}
-
-.icon-circle {
-    width: 70px;
-    height: 70px;
-    background: #fef2f2;
-    color: #c9a44b;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.8rem;
-    margin: 0 auto 20px;
-}
-
-.feature-card h3 {
-    font-size: 1.35rem;
-    color: #1e2937;
-    margin-bottom: 12px;
-}
-
-.feature-card p {
-    color: #64748b;
-    line-height: 1.6;
-}
-
-/* Responsive */
+/* Responsive Styles */
 @media (max-width: 992px) {
-    .main-content-card {
+    .about-content {
         grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 40px 30px;
     }
     
-    .about-left-column,
-    .about-features-grid {
-        padding: 18px;
-        gap: 16px;
+    .church-photo {
+        height: 400px;
     }
     
-    .about-image img {
-        height: 300px;
-    }
-    
-    .about-features-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    /* Mobile: all elements fade up instead of sideways */
-    .about-image,
-    .about-text,
-    .about-features-grid .feature-card {
-        transform: translateY(30px) !important;
-    }
-    
-    .main-content-card.visible .about-image,
-    .main-content-card.visible .about-text,
-    .main-content-card.visible .about-features-grid .feature-card {
-        transform: translateY(0) !important;
-    }
-
-    .about-text {
-        padding: 35px 30px;
+    .about-text-column h3 {
+        font-size: 2rem;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .about-parish {
         padding: 80px 15px;
     }
-
-    .main-church-title {
-        font-size: 15px;
-    }
+    
     .section-title {
-        font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
-        font-size: 39px;
-        margin-top: 0;
-        text-shadow: 0px 4px 15px #c9a44b;
+        font-size: 36px;
+    }
+    
+    .about-content {
+        padding: 30px 25px;
+        gap: 35px;
+    }
+    
+    .church-photo {
+        height: 320px;
+    }
+    
+    .about-text-column h3 {
+        font-size: 1.8rem;
+    }
+    
+
+}
+
+@media (max-width: 480px) {
+    .about-content {
+        padding: 25px 20px;
+        gap: 30px;
+        border-radius: 16px;
+    }
+    
+    .church-photo {
+        height: 260px;
+    }
+    
+    .image-badge {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+        bottom: 15px;
+        left: 15px;
+    }
+    
+    .about-text-column h3 {
+        font-size: 1.5rem;
+    }
+    
+    .about-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 24px;
     }
 }
 
